@@ -146,3 +146,6 @@ fill: red;
 #svg {
     width: 100%;
 }
+#content .land:hover {
+    fill: green;
+}
