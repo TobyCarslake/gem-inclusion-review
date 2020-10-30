@@ -245,7 +245,7 @@ for (x of interventions) {
     });
 }
 
-//this uses the array of elements with a class of square created above and thier first (intervention) and second (outcome) classes as values to use in the filter search
+//this uses the array of square elements created above and thier first (intervention) and second (outcome) classes as values to use in the filter search
 for (i=0; i < allGridsArray.length; i++) {
     let y = allGridsArray[i].classList[0];
     let z = allGridsArray[i].classList[1];
@@ -367,45 +367,69 @@ function handleMouseover(d) {
   d3.select('#content .centroid')
     .style('display', 'inline')
     .attr('transform', 'translate(' + centroid + ')');
-    
 }
+
+
+
+//???let y = data.filter(it => it.pop.includes(y) === d.properties.name).length;
+// search data.pop for d.properties name 
+
+
+//colors for paths
+// var color = d3.scaleOrdinal()
+//     .range(d3.schemeCategory20);
 
 function update(geojson) {
   var u = d3.select('#content g.map')
     .selectAll('path')
+    //.data(studies)
     .data(geojson.features);
+
 
   u.enter()
     .append('path')
     .attr("id",  d => d.properties.name_long.toLowerCase())
     .attr("class", d => d.properties.name)
-    .attr("text", d => d.properties.name_long)
-    .attr("text-anchor", "middle")
-    .attr("fill", "black")
+    // colors.style("fill", function(d, i) { return color(i); })
     .classed(" land", true)
+  //   //.attr("data-tippy-content", d => d.properties.name + "<br>" + "Studies: " + "<br>" + "Title: " + "<br>" + "Abstract: " + "<br>" + "URL: " + studies._enter[0][0].__data__.link + (studies => studies.__data__.link) )
+  //   .attr("data-tippy-content", d => d.properties.name + "<br>" + "Studies: " + "<br>" + "Title: " + "<br>" + "Abstract: " + "<br>" + "URL: " + "<a target=_blank" + ' href=' + studies._enter[0][0].__data__.link + '>' + studies._enter[0][0].__data__.pop +'</a>' + '<br>'+
+  //   `<div>	
+  //   Continent: ${'&nbsp;'.repeat(7)}${d.properties.continent}<br>
+  //   Country: ${'&nbsp;'.repeat(5)}${d.properties.name}<br>
+  //   No. Studies: ${'&nbsp;'}${d.properties.subregion}<br>
+  // </div>`)
+    //.attr("data-tippy-content", d => d.properties.continent)
+  //   //.attr("text", data => data.abstract)
     .attr('d', geoGenerator)
     .on('mouseover', handleMouseover)
     .on('mouseover', );
 
+console.log(u);
+
 let cpath = document.querySelectorAll(".land");
 let cpathArray = Array.from(cpath);
-console.log(cpathArray);
+// console.log(cpath);
+// console.log(cpathArray);
+// console.log(cpathArray[0]);
+
+console.log(countries.length);
+let countriesString = countries.toString().toLowerCase();
+for (t=0; t<countries.length; t++) {
 
 
 
-  for (t=0; t<countries.length; t++) {
-
-  for (i=0; i<cpathArray.length; i++) {
-      
-  
-    
-    let y = countries[t].toLowerCase();
-
+  for (i=0; i < cpathArray.length; i++) {
+      let y = countries[t].toLowerCase();
+      console.log(y);
+      console.log(countries[t]);
 
       //this filters the square element array and creates a new variable to calculate the length to use as the radius of the circle. same filter is used in the tippy generator below
       
-      let pip = data.filter(it => it.country.toLowerCase().includes(y) && (cpathArray[i].id.includes(y)));
+      let pip = data.filter(it => it.country.toLowerCase().includes(y)) && (cpathArray[i].id.includes(y));
       console.log(pip);
+      //allGridsArray[i].innerHTML += '<svg class="circle' + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length * 8 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
+
       //this compares the values in the data to the class list on the square element and if they match it adds the link and author text to the tippy.
       let pop = "";
       for(var j = 0; j < data.length; j++){
@@ -417,39 +441,145 @@ console.log(cpathArray);
               // else if(data[j].link === "" && data[j].intervention === y && data[j].outcome.includes(z))
               // pop += data[j].pop + '<br>';
       };
-
-      console.log(pop.length);
+      
       if(pop.length > 0)
       tippy("#" + cpathArray[i].id, {
       maxWidth: '',
-      content: '<p>' + data.filter(it => it.country.toLowerCase().includes(y)).length + " " + cpathArray[i].__data__.properties.name_long + '</p>' + pop,
-      //followCursor: true,
+      content: '<p>' + data.filter(it => it.country.toLowerCase().includes(y)).length + '</p>' + pop,
       allowHTML: true,
-      theme: "white",
-      //placement: "top",
-      //arrow: "false",
+      placement: "right",
       boundary: 'parent',
       appendTo: document.body,
       interactive: true
       });
-
-
-      // console.log(pip.length + cpathArray[i].id);
-      // if(!cpathArray[i].classList.contains('study'))
-      // tippy("#" + cpathArray[i].id, {
-      // maxWidth: '',
-      // content: cpathArray[i].classList[0],
-      // allowHTML: true,
-      // placement: "right",
-      // boundary: 'parent',
-      // appendTo: document.body,
-      // interactive: true
-      // });
       pop = '';
   };
 };
 }
 
+// This sort of works
+// //this uses the array of path elements created above and id value to use in the filter search
+// for (i=0; i < cpathArray.length; i++) {
+  
+//   //this compares the values in the data to path element id and if they match it adds the title abstract and author text to the tippy.
+  
+//   let hovContent = "";
+//   for(var j = 0; j < data.length; j++){
+//     let y = cpathArray[i].id;
+//     let cntHov = "";
+//     if(countries.toString().toLowerCase().includes(y) && data[j].country.toLowerCase().includes(y)) {
+//       console.log(y);
+    
+
+//      // if(data[j].country.toLowerCase().includes(y))
+//       hovContent = data.filter(it => it.country.toLowerCase().includes(y));
+      
+//       console.log(hovContent);
+//         for(k = 0; k<hovContent.length; k++){
+//           console.log(y);
+          
+//           cntHov += '<hr>' + "<a class=cntInfo target=_blank" + ' href=' + data[k].link + '>' + data[k].pop +'</a>' + '<br>' ;
+//           //cpathArray[i].innerHTML += '<svg class="circle bob' + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + hovContent.length * 8 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill="black"/></svg>';
+//           cpathArray[i].classList.add("study");
+        
+//           // cntHov = "<div class=modal-body>" + 
+//         //    "<div class=text-center>" +
+//         //      "<i class=fas fa-check fa-4x mb-3 animated rotateIn></i>" +
+//         //      "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit iusto nulla aperiam blanditiis"+
+//         //        "ad consequatur in dolores culpa, dignissimos, eius non possimus fugiat. Esse ratione fuga, enim,"+
+//         //        "ab officiis totam.</p>" +
+//         //    "</div>" +
+//         //  "</div>";
+
+//             //this just displays author - use this if there no url in the data file
+//             // else if(data[j].link === "" && data[j].intervention === y && data[j].outcome.includes(z))
+//             // pop += data[j].pop + '<br>';
+        
+  
+//     if(hovContent.length > 0)
+//         tippy("#" + cpathArray[i].id, {
+//         theme: 'white',
+//         maxWidth: 300,
+//         content: '<p>' + hovContent.length + '</p>' + cntHov,
+//         allowHTML: true,
+//         followCursor: 'default',
+//         // placement: "right",
+//         // boundary: 'parent',  
+//         appendTo: document.body,
+//         interactive: true,
+//         trigger: 'click'
+//     });
+//   };
+//   //}
+//   cntHov = '';
+//   hovContent = '';
+//   console.log(hovContent.length);
+// }
+// };
+// }
+// }
+
+
+
+
+
+
+
+
+
+
+// tippy('[data-tippy-content]', {
+//   followCursor: 'default',
+//   allowHTML: true,
+//   interactive:true,
+//   content,
+//   appendTo: document.body
+  
+// })
+
+
+//select all path and convert to array of nodes
+    
+  // let o = d3.select('#content g.map')
+  //          .selectAll('path');
+  // //let oArray = o.nodes();
+// console.log(o.length);
+// function update()
+
+
+
+
+//console.log(cpathArray._enter[0][0].__data__.properties.name);
+
+// const studies = d3.selectAll('path')
+//   .selectAll('path')
+//   .data(data);
+
+//   console.log(studies);
+
+
+// let studiesArray = Array.from.studies;
+// console.log(studies);
+// console.log(studiesArray);
+// let match = [];
+// //match = studiesArray.filter(country => country.hasOwnProperty('india'));
+
+// console.log(match);
+  
+//   console.log(studies._enter[0][0].__data__.link);
+// // let studies = []; 
+// for(c=0; countries.length; c++) {
+//   studies += data.filter(it => it.country.includes(countries[c]))
+// }
+
+
+// Promise.all([
+//   d3.json("countries.json"),
+//   d3.csv("studies.csv"),
+// ]).then(function(alldata) {
+//   console.log(alldata[0])  // first row of cities
+//   console.log(alldata[1])  // first row of animals
+// });
 
 // REQUEST DATA
 d3.json('countries.json', function(err, json) {
@@ -487,3 +617,29 @@ tippy("#studentbehaviour", {
   allowHTML: true,
   appendTo: document.body
 });
+
+// let allLand = document.querySelectorAll(".land");
+// let allLandArray = Array.from(allLand);
+// console.log(allLandArray);
+// console.log(allLand);
+
+
+// Loading Multiple Files
+// D3's basic loading mechanism is fine for one file, but starts to get messy as we nest multiple callbacks.
+
+// For loading multiple files, we can use Promises to wait for multiple data sources to be loaded.
+
+// Promise.all([
+//   d3.csv("/data/cities.csv"),
+//   d3.tsv("/data/animals.tsv")
+// ]).then(function(data) {
+//   console.log(data[0][0])  // first row of cities
+//   console.log(data[1][0])  // first row of animals
+// });
+
+// => {city: "seattle", state: "WA", population: "652405", land area: "83.9"}
+// {name: "tiger", type: "mammal", avg_weight: "260"}
+// This code is using d3.js
+// Note that inside the all method we load two types of files - using two different loading functions - so this is an easy way to mix and match file types.
+
+// The method returns an array of our data sources. The first item returns our cities; the second, our animals.

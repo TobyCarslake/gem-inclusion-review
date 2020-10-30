@@ -125,7 +125,7 @@ footer.bg-dark {
 }
 
 #content .map path {
-fill: #aaa;
+/* fill: #aaa; */
 stroke: #fff;
 }
 
@@ -146,6 +146,39 @@ fill: red;
 #svg {
     width: 100%;
 }
-#content .land:hover {
-    fill: green;
+#content .land {
+    fill: #aaa;
 }
+#content .study {
+    fill: darkgreen;
+}
+#content .study:hover {
+    fill: darkblue;
+}
+a.cntInfo:link {
+    color: black;
+}
+a.cntInfo:visited {
+    color: gray;
+}
+a.cntInfo:hover {
+    color: blue;
+}
+/* formatting for map tippy */
+.tippy-box[data-theme~='white'] {
+    background-color: white;
+    color: black;
+    line-height: 1.5em;
+    border-style: solid;
+    border-width: .5px;
+}
+/* a.tippy-box[data-theme~='white'] {
+    color: black;
+}
+a.tippy-box[data-theme~='white']:link {
+    color: black;
+}
+a.tippy-box[data-theme~='white']:hover {
+    color: blue;
+} */
+
