@@ -1,173 +1,300 @@
+// Quality of evidence	
+// Level 1 	Experimental Designs 
+// Level 2	Quasi-experimental Designs
+// Level 3	Observational – Analytic Designs 
+// Level 4	Observational –Descriptive Studies 
+// Level 5	Expert Opinion and Bench Research 
+
+
+
 const data = [
   {
     "no": 1,
     "key": "L53YZDVV",
+    "reference": "Agbenyega, J. S., & Klibthong, S. (2015).",
+    "findings": "Enhanced preschool teachers’ understanding of inclusion.\nImproved learning potential for children with and without disabilities.",
+    "Title": "Transforming Thai Preschool Teachers' Knowledge on Inclusive Practice: A Collaborative Inquiry",
+    "Key": "L53YZDVV",
+    "Year": 2015,
+    "quality": "Level 3",
     "pop": "Agbenyega 2015, Thailand",
+    "title": "Transforming Thai Preschool Teachers' Knowledge on Inclusive Practice: A Collaborative Inquiry",
     "link": "https://eric.ed.gov/?id=EJ1069532",
     "intervention": "Inclusive",
     "outcomes": "Early,Attitude,Pedagogical",
-    "country": "Thailand",
-    "abstract": "Educating children with disabilities alongside their peers in mainstream preschools has increased intensely over the past few years, affecting all aspects of early childhood education. Many children who previously would have been educated in segregated special centres are now being included in inclusive preschools. This research paper discusses how Thai preschool teachers' professional knowledge in inclusive education influence the ways they practice within preschool classrooms. Qualitative data obtained through observations and collaborative inquiry with teachers drawn from four preschool in Bangkok, Thailand showed that the lack of adequate teacher preparation for inclusive practice rendered the teachers helpless and unable to deliver curriculum that caters for the learning needs of children with disabilities. This paper contributes to the growing body of research to inform the usefulness of collaborative inquiry in helping teachers explore educational issues in systematic ways and determine solutions through reflection and dialogic inquiry."
+    "country": "Thailand"
   },
   {
     "no": 2,
     "key": "ASE6LY3N",
+    "reference": "Cheng, L. R. L., Wallach, G. P., & Reed, V. A. (2015).",
+    "findings": "Improved teachers’ understanding of principles behind assessment and intervention.\nTeachers improved knowledge on the importance of language and communication in understanding children’s learning challenges.\nTeachers improved ability to recognise the individuality of each child.",
+    "Title": "ASHA SLPs in China Teach Teachers about Their Students with Disabilities",
+    "Key": "ASE6LY3N",
+    "Year": 2015,
+    "quality": "Level 3",
     "pop": "Cheng 2015, China",
+    "title": "ASHA SLPs in China Teach Teachers about Their Students with Disabilities",
     "link": "http://dx.doi.org/10.1177/1525740114544027",
     "intervention": "Intellectual,Sensory",
     "outcomes": "Primary,Secondary,Attitude",
-    "country": "China",
-    "abstract": "The purpose of this article is to share a multicultural experience that took place in Guangzhou, China. The authors of this article joined a group of speech-language pathologists and audiologists to provide a training program for teachers and special education teachers in Guangzhou. It is our hope that this life changing experience will spark interest in our fellow professionals to act and to get involved internationally."
+    "country": "China"
   },
   {
     "no": 3,
     "key": "WAXG3EQU",
+    "reference": "Eng, P. S. (2015).",
+    "findings": "Greater staff awareness for students as individual with abilities and needs to acquire specified skills.",
+    "Title": "IEP Documentation for Effective Systematic Facilitation",
+    "Key": "WAXG3EQU",
+    "Year": 2015,
+    "quality": "Level 3",
     "pop": "Eng 2015, Vietnam",
+    "title": "IEP Documentation for Effective Systematic Facilitation",
     "link": "https://eric.ed.gov/?id=EJ1094919",
     "intervention": "Physical,Intellectual,Sensory",
     "outcomes": "Special,Pedagogical,Managing,Learning,Behaviour",
-    "country": "Vietnam",
-    "abstract": "This paper discusses how the process for IEP documentation was used in a training program for a group of young inexperienced teachers and teaching aides to effectively address the educational needs of children with diverse disabilities. Teachers at Kianh Centre in Vietnam received explicit instructions for writing effective functional individual education plans (IEPs). The authentic evidence-based IEP pro forma presently discussed, and was made culturally appropriate after many reviews and about a year of training. IEPs written on this pro forma were used as operational reference and working documents by both classroom and physical therapy staff for six and four months, respectively. Staff feedback on use of these documents was facilitated through a questionnaire. This paper presents the outcome of how IEP was used as a functional reference to empower staff to work with students with disabilities. Despite the diversity of disabilities of the students at Kianh Centre, all staff who participated agreed that IEPs written on the pro forma empowered them with effective skills to facilitate student learning."
+    "country": "Vietnam"
   },
   {
     "no": 4,
     "key": "JQ6XUVUI",
+    "reference": "Hai, N. X., Villa, R. A., Thousand, J. S., & Muc, P. M. (2020).",
+    "findings": "Increased activity-based instruction and student-teacher interactions.\nStudents explored new ideas via cooperative learning.\nPositive changes in teacher and classmate attitudes and feelings about children with disabilities.\nIncreased perception that all children should be respected.",
+    "Title": "Inclusion in Vietnam: More than a Quarter Century of Implementation.",
+    "Key": "IN7M6QNL",
+    "Year": 2020,
+    "quality": "Level 3",
     "pop": "Hai 2020, Vietnam",
+    "title": "Teacher Training Intervention for Early Identification of Common Child Mental Health Problems in Pakistan",
     "link": "http://dx.doi.org/10.26822/iejee.2020358219",
     "intervention": "Inclusive",
     "outcomes": "Primary,Attitude,Pedagogical,Learning,Behaviour",
-    "country": "Vietnam",
-    "abstract": "School-based interventions involving teacher training programmes have been shown to benefit teachers' ability to identify and manage child mental health problems in developed countries. However, very few studies have been conducted in low-income countries with limited specialist services. The aim of the study was to evaluate the impact of the training programme on teachers' knowledge and awareness. A total of 114 primary school teachers from five schools in Karachi participated in a two-day (10-12 hours) workshop to provide them with an understanding of common child mental health problems and train them in basic skills. Their pre-and post-training knowledge was evaluated through a rating scale and open-ended questions. Single tailed \"t\"-test, involving paired differences, was applied for participants' scores. Pre-/post-training differences were statistically significant. The training sessions were associated with an improvement in teachers' knowledge and awareness of various signs and symptoms of common child mental health problems. The greatest improvement was noted in response to strategies of managing difficult behaviours, as 61% of respondents were able to formulate appropriate behavioural management techniques after the training. In low-income developing countries like Pakistan, teachers should be trained in early-intervention programmes for the identification and school-based management of less complex emotional and behavioural problems. Such interventions can maximise the use of sparse mental health resources."
+    "country": "Vietnam"
   },
   {
     "no": 5,
     "key": "INW9G3QT",
+    "reference": "Hussein, S. A., & Vostanis, P. (2013).",
+    "findings": "Improved teachers’ knowledge and recognition of child mental health problems.",
+    "Title": "Teacher Training Intervention for Early Identification of Common Child Mental Health Problems in Pakistan",
+    "Key": "JQ6XUVUI",
+    "Year": 2013,
+    "quality": "Level 2",
     "pop": "Hussein 2013, Pakistan",
+    "title": "A Professional Learning Program for Enhancing the Competency of Students with Special Needs",
     "link": "http://dx.doi.org/10.1080/13632752.2013.819254",
     "intervention": "Intellectual",
     "outcomes": "Primary,Attitude,Managing",
-    "country": "Pakistan",
-    "abstract": "This study used a quasi-experimental research design to examine the impact of a professional learning program designed to enhance the competency of children with Autism, Attention Deficit Hyperactivity Disorder and Learning Disabilities and to develop knowledge, understanding and skills of teachers and parents in helping them. Data were collected from sample groups including administrators, teachers, students and parents. These sample groups were from 16 target schools, eight from Supanburi and eight from Khon Kaen provinces in Thailand. The instructional approaches were developed by teachers and taught in schools. Students were in Grades 1 to Grade 6. Research tools included parallel lesson plans, teaching materials and intervention techniques for enhancing student learning, a set of achievement tests and reflective forms. It was found that teachers and parents implemented intervention techniques which led to increased student academic performance and the development of a more collaborative approach to supporting children with diverse needs in Thailand."
+    "country": "Pakistan"
   },
   {
     "no": 6,
     "key": "JRB3EZB4",
+    "reference": "Kantavong, P., & Sivabaedya, S. (2010).",
+    "findings": "Improved teachers’ knowledge and understanding on helping students with special needs in inclusive classrooms.\nHigher student achievement scores in Math, reading and Spelling.",
+    "Title": "A Professional Learning Program for Enhancing the Competency of Students with Special Needs",
+    "Key": "INW9G3QT",
+    "Year": 2010,
+    "quality": "Level 2",
     "pop": "Kantavong 2010, Thailand",
+    "title": "Exploring professional knowing, being and becoming through inclusive pedagogical approach in action (IPAA) framework",
     "link": "https://eric.ed.gov/?id=EJ872441",
     "intervention": "Intellectual",
     "outcomes": "Primary,Attitude,Pedagogical,Learning",
-    "country": "Thailand",
-    "abstract": "Despite extensive changes in early childhood inclusive education policy and practice, various barriers continue to inhibit access and participation of children with special needs in inclusive schools. Often mentioned barriers include negative beliefs, lack of understanding of inclusive pedagogy and the effectiveness of professional development to improve teacher knowledge to reduce these barriers. This study reports on a Thai Bureau of Special Education professional development partnership program with an Australian inclusive school in which 16 early childhood teachers from Thailand participated. This community of practice inquiry project generated qualitative data from pre- and post-professional workshops semi-structured interviews and analysis of teachers' professional learning journals during the inquiry phases of the project. Thematic analysis of the data showed that the international professional learning immersion program exerted an influential impact on the teachers who participated suggesting; teachers developed better understandings of children with special education needs by creating a mindset for change. � 2018, Social Science Press."
+    "country": "Thailand"
   },
   {
     "no": 7,
     "key": "P4RM7X2J",
+    "reference": "Klibthong, S., & Agbenyega, J. S. (2018).",
+    "findings": "Deepened educators’ understanding of inclusive pedagogical knowledge about SEN.\nTransformed educators’ beliefs about teaching young children with SEN.",
+    "Title": "Exploring professional knowing, being and becoming through inclusive pedagogical approach in action (IPAA) framework",
+    "Key": "JRB3EZB4",
+    "Year": 2018,
+    "quality": "Level 3",
     "pop": "Klibthong 2018, Thailand",
+    "title": "Examining the Effectiveness of a Basic Functional Behavior Assessment Training Package on Special Education Teachers in Thailand: A Replication Study",
     "link": "http://dx.doi.org/10.14221/ajte.2018v43n3.7",
     "intervention": "Inclusive",
     "outcomes": "Early,Attitude",
-    "country": "Thailand",
-    "abstract": "Challenging behaviors are one of the basic problems that all pre- and in-service teachers have to be prepared to deal with in schools. In Thailand, it was found that challenging behaviors of students with disabilities had an effect on teachers' stress because many teachers perceived that they were lacking the knowledge and skills to deal with these problems. The primary purpose of this study was to evaluate the effectiveness of a modified version of a basic functional assessment (FBA) training package developed by Loman and Horner (2014) on increasing the knowledge and skills of Thai special education teachers with respect to the functional behavior assessment process. This process is a set of procedures developed in the United States for assisting practitioners in identifying appropriate function-based interventions in which the motivations of students are taking into account (Dunlap & Fox, 2011; Dunlap, Kern-Dunlap, Clarke, & Robbins, 1991; Foster-Johnson & Dunlap, 1993; Horner, 1994; Horner & Carr, 1997; Lane, Umbreit, & Beebe-Frankenberger, 1999). The original research questions from the Loman and Horner (2014) study were used. However, this study also examined whether a modified version of this training package would be effective within the cultural context of Thailand and whether it would be perceived as effective and acceptable by Thai special education teachers for implementation with Thai students in a Thai school. Twelve special education teachers who worked at a laboratory school in Thailand participated in this study. Nine of these special education teachers were randomly assigned to be in the intervention group, which received the training. The three remaining teachers were randomly assigned to the control group and did not receive the training. The results across a variety of measures indicated that all trained special education teachers increased their knowledge of the FBA process after receiving the training. Using a questionnaire that assessed the social validity of the training procedure, it was found that these teachers perceived the training as efficient, valuable, and acceptable for use by Thai teachers with Thai students in Thai schools. A number of recommendations are made based on this study with respect to how to improve the training process when used in Thailand or another country outside of the United States. Nevertheless, the most important finding of this study was that these procedures were effective in preparing these teachers to use the FBA process with their students. [The dissertation citations contained here are published with the permission of ProQuest LLC. Further reproduction is prohibited without permission. Copies of dissertations may be obtained by Telephone (800) 1-800-521-0600. Web page: http://www.proquest.com/en-US/products/dissertations/individuals.shtml.]"
+    "country": "Thailand"
   },
   {
     "no": 8,
     "key": "5CVH2LC4",
+    "reference": "Locharoenrat, W. (2019).",
+    "findings": "Teachers' acquired knowledge on FBA.\nImproved teachers’ understanding of the causes of behaviours and on dealing with problem behaviours.",
+    "Title": "Examining the Effectiveness of a Basic Functional Behavior Assessment Training Package on Special Education Teachers in Thailand: A Replication Study",
+    "Key": "P4RM7X2J",
+    "Year": 2019,
+    "quality": "Level 1",
     "pop": "Locharoenrat 2019, Thailand",
+    "title": "The Impact of Cognitive Strategy Instruction on Deaf Learners: An International Comparative Study.",
     "link": "https://www.proquest.com/docview/2272840258",
     "intervention": "Inclusive",
     "outcomes": "Primary,Secondary,Managing",
-    "country": "Thailand",
-    "abstract": "Teacher cohorts in England and China received special training in techniques for teaching higher-level critical and creative cognitive strategies to deaf learners. Evaluation after 6 months of classroom implementation found students improved in reasoning and critical (but not creative) thinking and teachers developed cognitive terminology and self-perceptions as teachers of problem solving. (Contains references.) (Author/DB)"
+    "country": "Thailand"
   },
   {
     "no": 9,
     "key": "S5I7CJFS",
+    "reference": "Martin, D. S., Craft, A., & Sheng, Z. N. (2001).",
+    "findings": "Gains in reasoning skills of children.\nImproved classroom- teaching techniques.",
+    "Title": "The Impact of Cognitive Strategy Instruction on Deaf Learners: An International Comparative Study.",
+    "Key": "5CVH2LC4",
+    "Year": 2001,
+    "quality": "Level 2",
     "pop": "Martin 2001, China",
+    "title": "Effective Teacher Training at the Autism Institute in the People's Republic of China.",
     "link": "https://www.jstor.org/stable/44390116",
     "intervention": "Sensory",
     "outcomes": "Special,Pedagogical,Learning,Behaviour",
-    "country": "China",
-    "abstract": "This article presents research that was conducted at the Autism Institute, an organization serving children with autism and their families in the People's Republic of China. The article examines and highlights aspects of the teacher training model at the Autism Institute that have led to the preparation of highly qualified, enthusiastic, and knowledgeable teachers of children with autism. Results of the research indicated that teacher education was highly valued at this organization, and teachers were seen as the most important part of the organization. Teachers received ongoing, systematic and specific on-the-job instruction. One of the most important features of this organization regarding teacher training was found to be the relationships between upper level staff including instructional leaders, and newer classroom teachers. These relationships were positive and based on mutual understanding and respect, and this has impacted the nature and success of teacher training. Implications for practice are discussed. [ABSTRACT FROM AUTHOR]"
+    "country": "China"
   },
   {
     "no": 10,
     "key": "IN7M6QNL",
+    "reference": "McCabe, H. (2008).",
+    "findings": "Teaching become more systematic.\nTeachers were more involved and knowledgeable.\nThe intervention encouraged mentoring and better relationships among the teachers and staff.",
+    "Title": "Effective Teacher Training at the Autism Institute in the People's Republic of China.",
+    "Key": "S5I7CJFS",
+    "Year": 2008,
+    "quality": "Level 3",
     "pop": "McCabe 2008, China",
+    "title": "Inclusion in Vietnam: More than a Quarter Century of Implementation.",
     "link": "http://dx.doi.org/10.1177/088840640803100204",
     "intervention": "Intellectual",
     "outcomes": "Special,Attitude,Pedagogical",
-    "country": "China",
-    "abstract": "This article traces the evolution of special education policies and services in Vietnam from their introduction to the current expansion of inclusive education for children and youth with disabilities. Impacts reported include increased educational opportunity for and inclusion of children with disabilities, the development of national policy and provincial and local infrastructures for inclusive education, and capacity building for teachers through preservice, in-service, and master's and doctoral programs expressly designed to prepare personnel to forward inclusive education throughout the country. [ABSTRACT FROM AUTHOR]"
+    "country": "China"
   },
   {
     "no": 11,
-    "key": "U5HSKNUR",
-    "pop": "Opartkiattikul 2015, Thailand",
-    "link": "http://dx.doi.org/10.1177/1053451215577471",
+    "key": "Add 016",
+    "reference": "Muttiah, N., Drager, K. D., McNaughton, D., & Perera, N. (2018).",
+    "findings": "Improved the number of evocative communication opportunities provided by teachers\nIncreased the number of communication turns taken by students.",
+    "Title": "Evaluating an AAC training for special education teachers in Sri Lanka, a low-and middle-income country",
+    "Key": "Add016",
+    "Year": 2018,
+    "quality": "Level 2",
+    "pop": "Muttiah 2018, Sri Lanka",
+    "title": "Evaluating an AAC training for special education teachers in Sri Lanka, a low-and middle-income country",
+    "link": "https://doi.org/10.1080/07434618.2018.1512651",
     "intervention": "Inclusive",
-    "outcomes": "Primary,Managing,Behaviour",
-    "country": "Thailand",
-    "abstract": "Thailand is aiming to improve special education practices, and inclusive education has been introduced and mandated by national laws in the past few years. However, inclusive practices are challenging for many Thai teachers and schools. Many teachers are unprepared to support students with diverse needs and to deal with behavior problems. To successfully support such students, teachers need to apply systematic and effective approaches. Functional behavioral assessment (FBA) is one such approach that may assist teachers in general classrooms. As FBA is a relatively new practice in Thailand, a contextualized approach is required. This article discusses several essential components in FBA implementation processes that need to be considered as well as an example of a research project that involved training Thai teachers in the use of FBA. � 2015, � Hammill Institute on Disabilities 2015."
+    "outcomes": "Special,Attitude,Pedagogical,Behaviour",
+    "country": "Sri Lanka"
   },
   {
     "no": 12,
-    "key": "FYAZRAB8",
-    "pop": "Salim 2019, Indonesia",
-    "link": "https://eric.ed.gov/?id=EJ1239168",
+    "key": "U5HSKNUR",
+    "reference": "Opartkiattikul, W., Arthur-Kelly, M., & Dempsey, I. (2015).",
+    "findings": "Teachers’ implemented the behaviour goals in their classrooms.\nStudents’ achieved target behaviours.",
+    "Title": "Implementing Functional Behavior Assessment in Thailand",
+    "Key": "U5HSKNUR",
+    "Year": 2015,
+    "quality": "Level 3",
+    "pop": "Opartkiattikul 2015, Thailand",
+    "title": "Implementing Functional Behavior Assessment in Thailand",
+    "link": "http://dx.doi.org/10.1177/1053451215577471",
     "intervention": "Inclusive",
-    "outcomes": "Primary,Attitude",
-    "country": "Indonesia",
-    "abstract": "This study aimed to determine the effect of disability friendly education training on teachers' understanding by applying disability-friendly education training modules. The research design adopted the pre-posttest method given to the same group before and after training on imparting disability friendly education. Classroom teachers in inclusive schools under the Ministry of Religion in Surakarta were the subjects of this research. The validity of the instrument was tested by using content validity on the feasibility or relevance of the contents of the test instrument through rational analysis by expert judgment. The results showed that the paired sample T-Test score was - 17.736 with significant level at 0.000, which means <0.05. It suggests that there is a significant difference in the score of the average teacher's understanding of disability-friendly education before and after training, and the difference is statistically significant too. It can therefore be concluded that disability friendly educational training is effective to improve teachers' understanding in public schools."
+    "outcomes": "Primary,Managing,Behaviour",
+    "country": "Thailand"
   },
   {
     "no": 13,
-    "key": "2KTKTLFJ",
-    "pop": "Shah 2012, India",
-    "link": "http://dx.doi.org/10.1007/s10597-011-9437-2",
-    "intervention": "Intellectual",
-    "outcomes": "Primary,Attitude,Pedagogical",
-    "country": "India",
-    "abstract": "The School Mental Health (SMH) services play critical roles fostering positive mental health and helping children with psychological problems. Despite its proven value, SMH services remain less developed in India. In this context, sensitizing teachers about child mental health issues could be considered as an important step in SMH promotion. Towards this goal, a large scale sensitization program for school teachers on SMH issues was carried out in an Indian city. This paper reports the process and the outcome of this sensitization program. � Springer Science+Business Media, LLC 2011."
+    "key": "FYAZRAB8",
+    "reference": "Salim, A., Hidayatullah, M. F., & Nugraheni, P. P. (2019).",
+    "findings": "Improved teachers' understanding of disability and inclusion.",
+    "Title": "Investigating Effectiveness of Disability Friendly Education Training Modules in Indonesian Schools",
+    "Key": "FYAZRAB8",
+    "Year": 2019,
+    "quality": "Level 2",
+    "pop": "Salim 2019, Indonesia",
+    "title": "Investigating Effectiveness of Disability Friendly Education Training Modules in Indonesian Schools",
+    "link": "https://eric.ed.gov/?id=EJ1239168",
+    "intervention": "Inclusive",
+    "outcomes": "Primary,Attitude",
+    "country": "Indonesia"
   },
   {
     "no": 14,
-    "key": "TQDWRQJ8",
-    "pop": "Simpson 2016, China",
-    "link": "https://www.iase.org/JIASE_2016.pdf#page=111",
+    "key": "2KTKTLFJ",
+    "reference": "Shah, H., & Kumar, D. (2012).",
+    "findings": "Enhanced school teachers’ awareness about positive mental health issues, and childhood emotional and behavioural difﬁculties to facilitate early identiﬁcation and intervention.",
+    "Title": "Sensitizing the teachers towards school mental health issues: An indian experience",
+    "Key": "2KTKTLFJ",
+    "Year": 2012,
+    "quality": "Level 3",
+    "pop": "Shah 2012, India",
+    "title": "Sensitizing the teachers towards school mental health issues: An indian experience",
+    "link": "http://dx.doi.org/10.1007/s10597-011-9437-2",
     "intervention": "Intellectual",
-    "outcomes": "Special,Pedagogical",
-    "country": "China",
-    "abstract": "Identifying students with ASD in the People's Republic of China (PRC) has lagged behind western countries, particularly the United States. Families often have to travel long distances to obtain a diagnosis and then are faced with few treatment options once the diagnosis is made. Recent laws governing special education in the PRC do not specifically address children with ASD; consequently, educational programs for these children are scarce. Though more special education teacher preparation programs are emerging, many are not well equipped to support teachers of children with ASD. Consequently, the need for in-service training in the area of ASD is significant. This manuscript discusses a collaborative two-year professional development project aimed at providing teachers in Nanjing, China, with much needed skills in working with students with ASD. A distance training model was employed to train teachers how to use informal assessment to guide instruction and monitor progress of their students. [ABSTRACT FROM AUTHOR]"
+    "outcomes": "Primary,Attitude,Pedagogical",
+    "country": "India"
   },
   {
     "no": 15,
-    "key": "7GSTUJPG",
-    "pop": "Srivastava 2015, India",
-    "link": "http://dx.doi.org/10.1080/21683603.2015.1064841",
-    "intervention": "Inclusive",
-    "outcomes": "Primary,Attitude,Pedagogical",
-    "country": "India",
-    "abstract": "Teachers are seen as key players in implementing inclusive education. However, extremely little attention has been paid to teacher preparation, particularly in India. The aim of the current study was to implement a teacher training program and evaluate its effects and appropriateness. This focused on increasing teachers' (a) attitudes, (b) knowledge about four types of special educational needs (i.e., attention deficit and hyperactivity disorder [ADHD], dyslexia, intellectual disability, and autistic spectrum disorder [ASD]), and (c) teaching methods. In a pre-posttest study, the effects of the training program were evaluated (n[subscript experimental group]�=�38, n[subscript control group]�=�41). A questionnaire package was administered before and after the implementation of the training program. Outcomes of the ANCOVA revealed that the teachers in the experimental group had significantly more positive attitudes and had increased their knowledge about dyslexia, intellectual disability, ASD, and teaching methods. Moreover, teachers evaluated the training program as relevant and appropriate. The practical implications of the results are discussed in terms of teacher preparation and the implementation of inclusive education."
+    "key": "TQDWRQJ8",
+    "reference": "Simpson, L. A., Sharon, Q., Kan, H., & Qing Qing, T. (2016).",
+    "findings": "Improved teachers’ instruction in the classroom.",
+    "Title": "Distance Learning: A Viable Option for Professional Development for Teachers of Students with Autism Spectrum Disorder in China.",
+    "Key": "TQDWRQJ8",
+    "Year": 2016,
+    "quality": "Level 3",
+    "pop": "Simpson 2016, China",
+    "title": "Distance Learning: A Viable Option for Professional Development for Teachers of Students with Autism Spectrum Disorder in China.",
+    "link": "https://www.iase.org/JIASE_2016.pdf#page=111",
+    "intervention": "Intellectual",
+    "outcomes": "Special,Pedagogical",
+    "country": "China"
   },
   {
     "no": 16,
-    "key": "9I9APPBY",
-    "pop": "Xie 2017, China",
-    "link": "http://dx.doi.org/10.1177/0271121416659052",
+    "key": "7GSTUJPG",
+    "reference": "Srivastava, M., de Boer, A. A., & Pijl, S. J. (2015).",
+    "findings": "Improved teacher attitudes toward inclusive education,\nEnhanced teachers’ knowledge about the four types of SEN, and about teaching methods.",
+    "Title": "Know How to Teach Me… Evaluating the Effects of an In-Service Training Program for Regular School Teachers toward Inclusive Education",
+    "Key": "7GSTUJPG",
+    "Year": 2015,
+    "quality": "Level 1",
+    "pop": "Srivastava 2015, India",
+    "title": "Know How to Teach Me… Evaluating the Effects of an In-Service Training Program for Regular School Teachers toward Inclusive Education",
+    "link": "http://dx.doi.org/10.1080/21683603.2015.1064841",
     "intervention": "Inclusive",
-    "outcomes": "Early,Attitude",
-    "country": "China",
-    "abstract": "China is expected to have a rapid growth in specialized early intervention (EI) services for young children ages birth to 6 and their families. A major barrier in the provision of EI services in China is the shortage of well-trained EI personnel. In 2013, a Home-Based Early Intervention Program (HBEIP) was started at South China Normal University (SCNU) in Guangzhou, China to prepare future professionals to use family-centered EI practices adapted from similar programs in the United States. During the first year of implementation, HBEIP collected data from a self-efficacy survey and a needs assessment. Results from the evaluation showed that Chinese trainees perceived the family-centered approach to EI as relevant and valuable, and indicated needs for improving supervision and coaching supports in future implementation of HBEIP. The research team discussed implications for cross-cultural adaptation and implementation of personnel training practices."
+    "outcomes": "Primary,Attitude,Pedagogical",
+    "country": "India"
   },
   {
     "no": 17,
+    "key": "9I9APPBY",
+    "reference": "Xie, H., Chen, C. I., Chen, C. Y., Squires, J., Li, W., & Liu, T. (2017).",
+    "findings": "Improved educators’ perception of their personal efficacy (e.g. abilities to offer beneficial services to children and families) and general efficacy (e.g., sense of the general effectiveness of family-centred early intervention).",
+    "Title": "Developing a Home-Based Early Intervention Personnel Training Program in Southeast China",
+    "Key": "9I9APPBY",
+    "Year": 2017,
+    "quality": "Level 2",
+    "pop": "Xie 2017, China",
+    "title": "Developing a Home-Based Early Intervention Personnel Training Program in Southeast China",
+    "link": "http://dx.doi.org/10.1177/0271121416659052",
+    "intervention": "Inclusive",
+    "outcomes": "Early,Attitude",
+    "country": "China"
+  },
+  {
+    "no": 18,
     "key": "WU4TRMU9",
+    "reference": "Yusuf, B. (2017).",
+    "findings": "Teachers’ produced creative and innovative instructional approaches including ICT strategies for an inclusive classroom.\nThe teachers identified Google Docs as a transformative and collaborative peer-tutoring platform for inclusive activities.",
+    "Title": "Essential technology skills for 21st-century teacher inclusive strategies",
+    "Key": "WU4TRMU9",
+    "Year": 2017,
+    "quality": "Level 3",
     "pop": "Yusuf 2017, Malaysia",
+    "title": "Essential technology skills for 21st-century teacher inclusive strategies",
     "link": "http://dx.doi.org/10.4324/9781315397702",
     "intervention": "Inclusive",
     "outcomes": "Primary,Secondary,Pedagogical",
-    "country": "Malaysia",
-    "abstract": "The concept of inclusive education can be traced from the 1980s when \"integration\" was the main focus for classroom professional practice. During that time, learners were mainly categorized as either 'normal' students or others with special needs. The 21st-century classroom environment has been made accessible and inclusive for the previously excluded special needs students through the introduction of assistive technologies. Assistive technologies are tools designed to assist individuals in meeting their needs by enabling them to participate in learning and related academic tasks by minimizing or overcoming the challenges posed by a body structure disability This chapter shares the experiences of in-service teachers in using group reflections for improving teacher professional knowledge and development of inclusive practices. The participants in this pilot study were enrolled in the master of education program (MEd) on a part-time basis at a public University in Malaysia."
+    "country": "Malaysia"
   }
 ]
 
@@ -202,8 +329,8 @@ const outcomes = ["early","primary","secondary","special","attitude","pedagogica
 const allCountries = data.map(({country}) => country);
 console.log(allCountries);
 // unique countries from 
-const countries = [...new Set(allCountries)];
-console.log(countries);
+const countrylist = [...new Set(allCountries)];
+console.log(countrylist);
 
 
 //https://stackoverflow.com/questions/57550082/creating-a-16x16-grid-using-javascript
@@ -251,8 +378,7 @@ for (i=0; i < allGridsArray.length; i++) {
     let z = allGridsArray[i].classList[1];
     //this filters the square element array and creates a new variable to calculate the length to use as the radius of the circle. same filter is used in the tippy generator below
     let pip = data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z));
-    console.log(pip);
-    allGridsArray[i].innerHTML += '<svg class="circle' + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length * 8 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
+    allGridsArray[i].innerHTML += '<svg class="circle' + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length * 7 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
 
     //this compares the values in the data to the class list on the square element and if they match it adds the link and author text to the tippy.
     let pop = "";
@@ -351,22 +477,23 @@ var geoGenerator = d3.geoPath()
 
 function handleMouseover(d) {
 
-  var pixelArea = geoGenerator.area(d);
-  var bounds = geoGenerator.bounds(d);
-  var centroid = geoGenerator.centroid(d);
-  var measure = geoGenerator.measure(d);
+  // var pixelArea = geoGenerator.area(d);
+  // var bounds = geoGenerator.bounds(d);
+  // var centroid = geoGenerator.centroid(d);
+  // var measure = geoGenerator.measure(d);
 
   d3.select('#content .info')
-  .text(d.properties.name + ' (path.area = ' + pixelArea.toFixed(1) + ' path.measure = ' + measure.toFixed(1) + ')');
+  //.text(d.properties.name + ' (path.area = ' + pixelArea.toFixed(1) + ' path.measure = ' + measure.toFixed(1) + ')');
+  .text(d.properties.name);
 
-  d3.select('#content .bounding-box rect')
-    .attr('x', bounds[0][0])
-    .attr('y', bounds[0][1])
-    .attr('width', bounds[1][0] - bounds[0][0])
-    .attr('height', bounds[1][1] - bounds[0][1]);
-  d3.select('#content .centroid')
-    .style('display', 'inline')
-    .attr('transform', 'translate(' + centroid + ')');
+  // d3.select('#content .bounding-box rect')
+  //   .attr('x', bounds[0][0])
+  //   .attr('y', bounds[0][1])
+  //   .attr('width', bounds[1][0] - bounds[0][0])
+  //   .attr('height', bounds[1][1] - bounds[0][1]);
+  // d3.select('#content .centroid')
+  //   .style('display', 'inline')
+  //   .attr('transform', 'translate(' + centroid + ')');
     
 }
 
@@ -377,9 +504,9 @@ function update(geojson) {
 
   u.enter()
     .append('path')
-    .attr("id",  d => d.properties.name_long.toLowerCase())
+    .attr("id",  d => d.properties.name_long.toLowerCase().replace(/\s+/g, ''))
     .attr("class", d => d.properties.name)
-    .attr("text", d => d.properties.name_long)
+    .attr("name", d => d.properties.name_long)
     .attr("text-anchor", "middle")
     .attr("fill", "black")
     .classed(" land", true)
@@ -393,13 +520,13 @@ console.log(cpathArray);
 
 
 
-  for (t=0; t<countries.length; t++) {
+  for (t=0; t<countrylist.length; t++) {
 
   for (i=0; i<cpathArray.length; i++) {
       
   
     
-    let y = countries[t].toLowerCase();
+    let y = countrylist[t].toLowerCase().replace(/\s+/g, '');
 
 
       //this filters the square element array and creates a new variable to calculate the length to use as the radius of the circle. same filter is used in the tippy generator below
@@ -409,8 +536,10 @@ console.log(cpathArray);
       //this compares the values in the data to the class list on the square element and if they match it adds the link and author text to the tippy.
       let pop = "";
       for(var j = 0; j < data.length; j++){
-          if(data[j].country.toLowerCase().includes(y) && (cpathArray[i].id.includes(y))) {
-              pop += "<a target=_blank" + ' href=' + data[j].link + '>' + data[j].pop +'</a>' + '<br>';
+          if(data[j].country.toLowerCase().replace(/\s+/g, '').includes(y) && (cpathArray[i].id.includes(y))) {
+              //pop += "<a target=_blank" + ' href=' + data[j].link + '>' + data[j].pop +'</a>' + '<br>';
+              
+              pop += '<p><b>' + data[j].title + '</b>' + '<br>' + data[j].reference + '<br>' + "Key findings: " + data[j].findings + '<br>' + "<a target=_blank" + ' href=' + data[j].link + '>' + data[j].link +'</a>';
               cpathArray[i].classList.add("study");
           }
               //this just displays author - use this if there no url in the data file
@@ -418,38 +547,27 @@ console.log(cpathArray);
               // pop += data[j].pop + '<br>';
       };
 
-      console.log(pop.length);
-      if(pop.length > 0)
-      tippy("#" + cpathArray[i].id, {
-      maxWidth: '',
-      content: '<p>' + data.filter(it => it.country.toLowerCase().includes(y)).length + " " + cpathArray[i].__data__.properties.name_long + '</p>' + pop,
-      //followCursor: true,
-      allowHTML: true,
-      theme: "white",
-      //placement: "top",
-      //arrow: "false",
-      boundary: 'parent',
-      appendTo: document.body,
-      interactive: true
-      });
-
-
-      // console.log(pip.length + cpathArray[i].id);
-      // if(!cpathArray[i].classList.contains('study'))
-      // tippy("#" + cpathArray[i].id, {
-      // maxWidth: '',
-      // content: cpathArray[i].classList[0],
-      // allowHTML: true,
-      // placement: "right",
-      // boundary: 'parent',
-      // appendTo: document.body,
-      // interactive: true
-      // });
+      if(!pop == "") {
+          tippy("#" + cpathArray[i].id, {
+          trigger:'click',
+          interactiveBorder: 30,
+          maxWidth: '900px',
+          content: '<p><b>' + data.filter(it => it.country.toLowerCase().replace(/\s+/g, '').includes(y)).length + " " + cpathArray[i].__data__.properties.name_long + '</b></p>' + pop,
+          //followCursor: true,
+          allowHTML: true,
+          theme: "white",
+          //placement: "top",
+          //arrow: "false",
+          boundary: 'parent',
+          sticky: 'true',
+          appendTo: document.body,
+          interactive: true
+          });
+      }
       pop = '';
   };
 };
 }
-
 
 // REQUEST DATA
 d3.json('countries.json', function(err, json) {
