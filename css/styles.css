@@ -164,7 +164,7 @@ a.cntInfo:hover {
 .tippy-box[data-theme~='white'] {
     background-color: white;
     color: black;
-    line-height: 1.5em;
+    line-height: 1.1em;
     border-style: solid;
     border-width: .5px;
 }
@@ -172,10 +172,10 @@ a.cntInfo:hover {
     color: black;
 }
 .tippy-box[data-theme~='white'] a:link {
-    color: black;
+    color: blue;
 }
 .tippy-box[data-theme~='white'] a:hover {
-    color: blue;
+    color: lightblue;
 }
 .tippy-box[data-theme~='white'] a:visited {
     color: gray;
