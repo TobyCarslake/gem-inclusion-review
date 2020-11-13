@@ -59,6 +59,11 @@ a:hover {
 .tog {
     padding: 4px;
 }
+#chart {
+    width: 100%;
+    height: 400px;
+    /* background: white; */
+}
 .tippy-box {
     font-size: .8em;
     background-color:#333333;
@@ -119,41 +124,31 @@ footer.bg-dark {
 }
 
 /*  style for map*/
-
 #content .info {
     height: 20px;
 }
 
 #content .map path {
 /* fill: #aaa; */
-stroke: #fff;
+stroke: black;
 }
-
-#content .bounding-box rect {
-fill: none;
-stroke: #333;
-stroke-dasharray: 2,1;
-}
-
-#content .centroid {
-display: none;
-}
-
-#content .centroid circle {
-fill: red;
-}
-
 #svg {
     width: 100%;
 }
 #content .land {
-    fill: #aaa;
+    fill: #efefef;
+}
+#content .notDev {
+    fill: rgb(196, 196, 196);
+}
+#content .dfatDev {
+    fill: #a8b4d0;
 }
 #content .study {
-    fill: darkgreen;
+    fill: #72118a;
 }
 #content .study:hover {
-    fill: lightgreen;
+    fill: #a479af;
 }
 a.cntInfo:link {
     color: black;
@@ -184,3 +179,9 @@ a.cntInfo:hover {
 .tippy-box[data-theme~='white'] a:visited {
     color: gray;
 }
+/* #btn-zoom {
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    z-index: 10;
+} */
