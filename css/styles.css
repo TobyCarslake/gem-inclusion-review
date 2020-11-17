@@ -63,7 +63,7 @@ a:hover {
     width: 100%;
     height: 400px;
     margin-bottom: 20px;
-    /* background: white; */
+    background: lightblue;
 }
 .tippy-box {
     font-size: .8em;
@@ -112,7 +112,7 @@ footer.bg-dark {
         margin-right: auto;
     }
 
-    #grid, .tog, #legend{
+    #grid, .tog, {
         width: auto;
         margin-left: auto;
         margin-right: auto;
@@ -140,10 +140,10 @@ stroke: black;
     fill: #efefef;
 }
 #content .notDev {
-    fill: rgb(196, 196, 196);
+    fill: #1d8ba7;
 }
 #content .dfatDev {
-    fill: #a8b4d0;
+    fill: #859cd3;
 }
 #content .study {
     fill: #72118a;
@@ -180,9 +180,7 @@ a.cntInfo:hover {
 .tippy-box[data-theme~='white'] a:visited {
     color: gray;
 }
-/* #btn-zoom {
-    position: absolute;
-    top: 45px;
-    left: 10px;
-    z-index: 10;
-} */
+
+.legend {
+    background: lightslategray;
+}
