@@ -856,14 +856,16 @@ function showSetting() {
 
 
 let width = d3.select("#chart").node().getBoundingClientRect().width;
-let height = 500;
-console.log(width);
+let height = d3.select("#chart").node().getBoundingClientRect().height;
+// console.log(width);
+// console.log(d3.select("#chart").node().getBoundingClientRect());
 
 //this is for flat map display
 var projection = d3.geoMercator()
 .scale(250)
-  .translate([200, 300])
-  .center([0, 0]);
+  .translate([700, 300])
+  .center([0, 0])
+  .rotate([-165, 0]);
 
 var geoGenerator = d3.geoPath()
   .projection(projection);
@@ -875,13 +877,6 @@ function handleMouseover(d) {
   // var bounds = geoGenerator.bounds(d);
   // var centroid = geoGenerator.centroid(d);
   // var measure = geoGenerator.measure(d);
-
-  d3.select('#content')
-  .append('rect')
-      .attr('x', 0)
-      .attr('y', 0)
-      .attr('width', width)
-      .attr('height', height);
 
   d3.select('#content .info')
   //.text(d.properties.name + ' (path.area = ' + pixelArea.toFixed(1) + ' path.measure = ' + measure.toFixed(1) + ')');
@@ -900,28 +895,17 @@ function handleMouseover(d) {
 
 
   var svg = d3.select("#chart")
-  .append("svg")
-  // .attr("width", "400")
-  // .attr("height", "400")
+  //.append("svg")
+  // .attr("width", width)
+  // .attr("height", height)
   //.attr("viewBox", `0 0 900 900`)
   .call(d3.zoom().on("zoom", function () {
           svg.attr("transform", d3.event.transform)
   }))
+  .append("svg")
+  .attr("width", width)
+  .attr("height", height)
   .append("g");
-// var dof = d3.select("#content g.map")
-// .append("svg")
-// .attr("width", "100%")
-// .attr("height", "100%")
-// .call(d3.zoom().on("zoom", function () {
-//    dof.attr("transform", d3.event.transform)
-// }))
-// .append("g")
-
-// dof.append("circle")
-// .attr("cx", document.body.clientWidth / 3)
-// .attr("cy", document.body.clientHeight / 3)
-// .attr("r", 50)
-// .style("fill", "#B8DEE6")
 
 
 
@@ -931,9 +915,6 @@ function update(geojson) {
     .selectAll('path')
     .data(geojson.features);
 
-  // let bob = geojson.features.__data__.properties.filter((dfat) => dfatCountries.includes(dfat.numericCountryCode));
-  // console.log(geojson.features);
-  // //[0].__data__.properties
 u.enter()
     .append('path')
     .attr("id",  d => d.properties.name_long.toLowerCase().replace(/\s+/g, ''))
@@ -948,22 +929,24 @@ u.enter()
     .on('mouseover', );
     
     //this adds country names to the centre of the paths 
-    // u.enter()
-    //   .append('text')
-    //   .text(d => d.properties.name)
-    //   // .text(function(d) {
-    //   //   if(d.properties.name)
-    //   //     return d.properties.name;
-    //   //     })
-    //   .attr("x", function(d) {
-    //     return geoGenerator.centroid(d)[0];})
-    //   .attr("y", function(d) {
-    //     return geoGenerator.centroid(d)[1];})
-    //   .attr("class","labels");
+    u.enter()
+      .append('text')
+      //.text(d => d.properties.name)
+      .text(function(d) {
+        for (i=0;i<u.length;i++) {
+          if(true) {
+          //if(dfatCountries.includes(d.properties.adm0_a3)) {
+          console.log(d.properties.adm0_a3);
+            return d.properties.name;
+            }
+          }
+        })
+      .attr("x", function(d) {
+        return geoGenerator.centroid(d)[0];})
+      .attr("y", function(d) {
+        return geoGenerator.centroid(d)[1];})
+      .attr("class","labels");
 
-      
-
-         
 
 let cpath = document.querySelectorAll(".land");
 let cpathArray = Array.from(cpath);
@@ -1032,13 +1015,6 @@ console.log(cpathArray);
 d3.json('countries.json', function(error, json) {
   update(json)
 })
-// const element = document.getElementById("chart");
-// const dfatc = d3.selectAll('.dfatDev,.dfatNotdev');
-//     console.log(dfatc);
-// }
-// const result = [...element.dfatc].some(className => has_some.contains(className));
- 
-// console.log(result)
 
 //console.log(geojson);
 const legend = d3.select("#chart")
@@ -1059,7 +1035,7 @@ legend.selectAll()
   .append("rect")
     .attr("class","legend")
     .attr("x", 5)
-    .attr("y", function(d,i){ return 300 + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("y", function(d,i){ return 400 + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
     .attr("width", size)
     .attr("height", size)
     .style("fill", function(d){ return color(d)})
@@ -1070,7 +1046,7 @@ legend.selectAll("mylabels")
   .enter()
   .append("text")
     .attr("x", 5 + size*1.2)
-    .attr("y", function(d,i){ return 300 + i*(size+5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("y", function(d,i){ return 400 + i*(size+5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
     .style("fill", "black")
     //.style("fill", function(d){ return color(d)})
     .text(function(d){ return d})

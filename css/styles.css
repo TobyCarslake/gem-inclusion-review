@@ -61,7 +61,7 @@ a:hover {
 }
 #chart {
     width: 100%;
-    height: 400px;
+    height: 500px;
     margin-bottom: 20px;
     background: lightblue;
 }
@@ -129,24 +129,31 @@ footer.bg-dark {
     height: 20px;
 }
 
-#content .map path {
-/* fill: #aaa; */
+/* #content .map path {
+fill: #aaa;
 stroke: black;
-}
+stroke-width: 4;
+} */
 #svg {
     width: 100%;
 }
 #content .land {
     fill: #efefef;
+    stroke: black;
+    stroke-width: .5;
 }
 #content .notDev {
     fill: #1d8ba7;
 }
 #content .dfatDev {
     fill: #859cd3;
+    
 }
 #content .study {
     fill: #72118a;
+    /* stroke: white;
+    stroke-width: 1; */
+
 }
 #content .study:hover {
     fill: #a479af;
