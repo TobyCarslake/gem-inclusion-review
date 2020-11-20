@@ -44,7 +44,9 @@
 }
 circle {
     fill: lightslategray;
+    /* stroke: black; */
 }
+
 /* to change svg circle on hover */
 circle:hover {
     stroke: rgb(58, 56, 56);    
@@ -140,7 +142,7 @@ stroke-width: 4;
 #content .land {
     fill: #efefef;
     stroke: black;
-    stroke-width: .5;
+    stroke-width: .001;
 }
 #content .notDev {
     fill: #1d8ba7;
@@ -157,6 +159,7 @@ stroke-width: 4;
 }
 #content .study:hover {
     fill: #a479af;
+    cursor: pointer;
 }
 a.cntInfo:link {
     color: black;
@@ -190,4 +193,10 @@ a.cntInfo:hover {
 
 .legend {
     background: lightslategray;
+}
+.labels {
+    font-size: .7em;
+    /* stroke: white;
+    stroke-width: .1; */
+    cursor: default;
 }

@@ -312,399 +312,570 @@ const dfatCountries  = [
     "DFATsubRegion": "South Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "AFG",
-    "numericCountryCode": 4
+    "numericCountryCode": 4,
+    "alpha2": "AF",
+    "lat": 33.93911,
+    "long": 67.709953
   },
   {
     "name": "Armenia",
     "DFATsubRegion": "Western Asia",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "ARM",
-    "numericCountryCode": 51
+    "numericCountryCode": 51,
+    "alpha2": "AM",
+    "lat": 41.069099,
+    "long": 45.038189
   },
   {
     "name": "Australia",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "AUS",
-    "numericCountryCode": 36
+    "numericCountryCode": 36,
+    "alpha2": "AU",
+    "lat": -25.274398,
+    "long": 133.775136
   },
   {
     "name": "Azerbaijan",
     "DFATsubRegion": "Western Asia",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "AZE",
-    "numericCountryCode": 31
+    "numericCountryCode": 31,
+    "alpha2": "AZ",
+    "lat": 40.143105,
+    "long": 48.576927
   },
   {
     "name": "Bangladesh",
     "DFATsubRegion": "South Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "BGD",
-    "numericCountryCode": 50
+    "numericCountryCode": 50,
+    "alpha2": "BD",
+    "lat": 23.684994,
+    "long": 90.356331
   },
   {
     "name": "Bhutan",
     "DFATsubRegion": "South Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "BTN",
-    "numericCountryCode": 64
+    "numericCountryCode": 64,
+    "alpha2": "BT",
+    "lat": 27.514162,
+    "long": 90.433601
   },
   {
-    "name": "Brunei Darussalam",
+    "name": "Brunei",
     "DFATsubRegion": "South East Asia",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "BRN",
-    "numericCountryCode": 96
+    "numericCountryCode": 96,
+    "alpha2": "BN",
+    "lat": 4.535277,
+    "long": 114.727669
   },
   {
     "name": "Cambodia",
     "DFATsubRegion": "South East Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "KHM",
-    "numericCountryCode": 116
+    "numericCountryCode": 116,
+    "alpha2": "KH",
+    "lat": 12.565679,
+    "long": 104.990963
   },
   {
     "name": "China",
     "DFATsubRegion": "East Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "CHN",
-    "numericCountryCode": 156
+    "numericCountryCode": 156,
+    "alpha2": "CN",
+    "lat": 35.86166,
+    "long": 104.195397
   },
   {
     "name": "Cook Islands",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "COK",
-    "numericCountryCode": 184
+    "numericCountryCode": 184,
+    "alpha2": "CK",
+    "lat": -21.236736,
+    "long": -159.777671
   },
   {
-    "name": "Federated States of Micronesia",
+    "name": "Micronesia",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "FSM",
-    "numericCountryCode": 583
+    "numericCountryCode": 583,
+    "alpha2": "FM",
+    "lat": 7.425554,
+    "long": 150.550812
   },
   {
     "name": "Fiji",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "FJI",
-    "numericCountryCode": 242
+    "numericCountryCode": 242,
+    "alpha2": "FJ",
+    "lat": -16.578193,
+    "long": 179.414413
   },
   {
     "name": "French Polynesia",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "PYF",
-    "numericCountryCode": 258
+    "numericCountryCode": 258,
+    "alpha2": "PF",
+    "lat": -17.679742,
+    "long": -149.406843
   },
   {
     "name": "Georgia",
     "DFATsubRegion": "Western Asia",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "GEO",
-    "numericCountryCode": 268
+    "numericCountryCode": 268,
+    "alpha2": "GE",
+    "lat": 42.315407,
+    "long": 43.356892
   },
   {
     "name": "Guam",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "GUM",
-    "numericCountryCode": 316
+    "numericCountryCode": 316,
+    "alpha2": "GU",
+    "lat": 13.444304,
+    "long": 144.793731
   },
   {
     "name": "Hong Kong",
     "DFATsubRegion": "East Asia",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "HKG",
-    "numericCountryCode": 344
+    "numericCountryCode": 344,
+    "alpha2": "HK",
+    "lat": 23,
+    "long": 114.109497
   },
   {
     "name": "India",
     "DFATsubRegion": "South Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "IND",
-    "numericCountryCode": 356
+    "numericCountryCode": 356,
+    "alpha2": "IN",
+    "lat": 20.593684,
+    "long": 78.96288
   },
   {
     "name": "Indonesia",
     "DFATsubRegion": "South East Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "IDN",
-    "numericCountryCode": 360
+    "numericCountryCode": 360,
+    "alpha2": "ID",
+    "lat": -0.789275,
+    "long": 113.921327
   },
   {
     "name": "Japan",
     "DFATsubRegion": "East Asia",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "JPN",
-    "numericCountryCode": 392
+    "numericCountryCode": 392,
+    "alpha2": "JP",
+    "lat": 36.204824,
+    "long": 138.252924
   },
   {
     "name": "Kazakhstan",
     "DFATsubRegion": "Central Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "KAZ",
-    "numericCountryCode": 398
+    "numericCountryCode": 398,
+    "alpha2": "KZ",
+    "lat": 48.019573,
+    "long": 66.923684
   },
   {
     "name": "Kiribati",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "KIR",
-    "numericCountryCode": 296
+    "numericCountryCode": 296,
+    "alpha2": "KI",
+    "lat": 3.370417,
+    "long": -168.734039
   },
   {
     "name": "Kyrgyzstan",
     "DFATsubRegion": "Central Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "KGZ",
-    "numericCountryCode": 417
+    "numericCountryCode": 417,
+    "alpha2": "KG",
+    "lat": 41.20438,
+    "long": 74.766098
   },
   {
     "name": "Laos",
     "DFATsubRegion": "South East Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "LAO",
-    "numericCountryCode": 418
+    "numericCountryCode": 418,
+    "alpha2": "LA",
+    "lat": 19.85627,
+    "long": 102.495496
   },
   {
     "name": "Macao",
     "DFATsubRegion": "East Asia",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "MAC",
-    "numericCountryCode": 446
+    "numericCountryCode": 446,
+    "alpha2": "MO",
+    "lat": 22,
+    "long": 113.543873
   },
   {
     "name": "Malaysia",
     "DFATsubRegion": "South East Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "MYS",
-    "numericCountryCode": 458
+    "numericCountryCode": 458,
+    "alpha2": "MY",
+    "lat": 4.210484,
+    "long": 101.975766
   },
   {
     "name": "Maldives",
     "DFATsubRegion": "South Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "MDV",
-    "numericCountryCode": 462
+    "numericCountryCode": 462,
+    "alpha2": "MV",
+    "lat": 3.202778,
+    "long": 73.22068
   },
   {
     "name": "Marshall Islands",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "MHL",
-    "numericCountryCode": 584
+    "numericCountryCode": 584,
+    "alpha2": "MH",
+    "lat": 7.131474,
+    "long": 171.184478
   },
   {
     "name": "Mongolia",
     "DFATsubRegion": "East Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "MNG",
-    "numericCountryCode": 496
+    "numericCountryCode": 496,
+    "alpha2": "MN",
+    "lat": 46.862496,
+    "long": 103.846656
   },
   {
     "name": "Myanmar",
     "DFATsubRegion": "South East Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "MMR",
-    "numericCountryCode": 104
+    "numericCountryCode": 104,
+    "alpha2": "MM",
+    "lat": 21.913965,
+    "long": 95.956223
   },
   {
     "name": "Nauru",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "NRU",
-    "numericCountryCode": 520
+    "numericCountryCode": 520,
+    "alpha2": "NR",
+    "lat": -0.522778,
+    "long": 166.931503
   },
   {
     "name": "Nepal",
     "DFATsubRegion": "South Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "NPL",
-    "numericCountryCode": 524
+    "numericCountryCode": 524,
+    "alpha2": "NP",
+    "lat": 28.394857,
+    "long": 84.124008
   },
   {
     "name": "New Caledonia",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "NCL",
-    "numericCountryCode": 540
+    "numericCountryCode": 540,
+    "alpha2": "NC",
+    "lat": -20.904305,
+    "long": 165.618042
   },
   {
     "name": "New Zealand",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "NZL",
-    "numericCountryCode": 554
+    "numericCountryCode": 554,
+    "alpha2": "NZ",
+    "lat": -40.900557,
+    "long": 174.885971
   },
   {
     "name": "Niue",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "NIU",
-    "numericCountryCode": 570
+    "numericCountryCode": 570,
+    "alpha2": "NU",
+    "lat": -19.054445,
+    "long": -169.867233
   },
   {
     "name": "North Korea",
     "DFATsubRegion": "East Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "PRK",
-    "numericCountryCode": 408
+    "numericCountryCode": 408,
+    "alpha2": "KP",
+    "lat": 40.339852,
+    "long": 127.510093
   },
   {
     "name": "Northern Mariana Islands",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "MNP",
-    "numericCountryCode": 580
+    "numericCountryCode": 580,
+    "alpha2": "MP",
+    "lat": 17.33083,
+    "long": 145.38469
   },
   {
     "name": "Pakistan",
     "DFATsubRegion": "South Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "PAK",
-    "numericCountryCode": 586
+    "numericCountryCode": 586,
+    "alpha2": "PK",
+    "lat": 30.375321,
+    "long": 69.345116
   },
   {
     "name": "Palau",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "PLW",
-    "numericCountryCode": 585
+    "numericCountryCode": 585,
+    "alpha2": "PW",
+    "lat": 7.51498,
+    "long": 134.58252
   },
   {
     "name": "Papua New Guinea",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "PNG",
-    "numericCountryCode": 598
+    "numericCountryCode": 598,
+    "alpha2": "PG",
+    "lat": -6.314993,
+    "long": 143.95555
   },
   {
     "name": "Philippines",
     "DFATsubRegion": "South East Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "PHL",
-    "numericCountryCode": 608
+    "numericCountryCode": 608,
+    "alpha2": "PH",
+    "lat": 12.879721,
+    "long": 121.774017
   },
   {
     "name": "Samoa",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "WSM",
-    "numericCountryCode": 882
+    "numericCountryCode": 882,
+    "alpha2": "WS",
+    "lat": -13.759029,
+    "long": -172.104629
   },
   {
     "name": "Singapore",
     "DFATsubRegion": "South East Asia",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "SGP",
-    "numericCountryCode": 702
+    "numericCountryCode": 702,
+    "alpha2": "SG",
+    "lat": 1.352083,
+    "long": 103.819836
   },
   {
     "name": "Solomon Islands",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "SLB",
-    "numericCountryCode": 90
+    "numericCountryCode": 90,
+    "alpha2": "SB",
+    "lat": -9.64571,
+    "long": 160.156194
   },
   {
     "name": "South Korea",
     "DFATsubRegion": "East Asia",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "KOR",
-    "numericCountryCode": 410
+    "numericCountryCode": 410,
+    "alpha2": "KR",
+    "lat": 35.907757,
+    "long": 127.766922
   },
   {
     "name": "Sri Lanka",
     "DFATsubRegion": "South Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "LKA",
-    "numericCountryCode": 144
+    "numericCountryCode": 144,
+    "alpha2": "LK",
+    "lat": 7.873054,
+    "long": 80.771797
   },
   {
     "name": "Taiwan",
     "DFATsubRegion": "East Asia",
     "DFATdevelopingcountry": "notDev",
     "alpha3": "TWN",
-    "numericCountryCode": 158
+    "numericCountryCode": 158,
+    "alpha2": "TW",
+    "lat": 23.69781,
+    "long": 120.960515
   },
   {
     "name": "Tajikistan",
     "DFATsubRegion": "Central Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "TJK",
-    "numericCountryCode": 762
+    "numericCountryCode": 762,
+    "alpha2": "TJ",
+    "lat": 38.861034,
+    "long": 71.276093
   },
   {
     "name": "Thailand",
     "DFATsubRegion": "South East Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "THA",
-    "numericCountryCode": 764
+    "numericCountryCode": 764,
+    "alpha2": "TH",
+    "lat": 15.870032,
+    "long": 100.992541
   },
   {
     "name": "Timor-Leste",
     "DFATsubRegion": "South East Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "TLS",
-    "numericCountryCode": 626
+    "numericCountryCode": 626,
+    "alpha2": "TL",
+    "lat": -8.874217,
+    "long": 125.727539
   },
   {
     "name": "Tokelau",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "TKL",
-    "numericCountryCode": 772
+    "numericCountryCode": 772,
+    "alpha2": "TK",
+    "lat": -8.967363,
+    "long": -171.855881
   },
   {
     "name": "Tonga",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "TON",
-    "numericCountryCode": 776
+    "numericCountryCode": 776,
+    "alpha2": "TO",
+    "lat": -21.178986,
+    "long": -175.198242
   },
   {
     "name": "Turkmenistan",
     "DFATsubRegion": "Central Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "TKM",
-    "numericCountryCode": 795
+    "numericCountryCode": 795,
+    "alpha2": "TM",
+    "lat": 38.969719,
+    "long": 59.556278
   },
   {
     "name": "Tuvalu",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "TUV",
-    "numericCountryCode": 798
+    "numericCountryCode": 798,
+    "alpha2": "TV",
+    "lat": -7.109535,
+    "long": 177.64933
   },
   {
     "name": "Uzbekistan",
     "DFATsubRegion": "Central Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "UZB",
-    "numericCountryCode": 860
+    "numericCountryCode": 860,
+    "alpha2": "UZ",
+    "lat": 41.377491,
+    "long": 64.585262
   },
   {
     "name": "Vanuatu",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "VUT",
-    "numericCountryCode": 548
+    "numericCountryCode": 548,
+    "alpha2": "VU",
+    "lat": -15.376706,
+    "long": 166.959158
   },
   {
     "name": "Vietnam",
     "DFATsubRegion": "South East Asia",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "VNM",
-    "numericCountryCode": 704
+    "numericCountryCode": 704,
+    "alpha2": "VN",
+    "lat": 14.058324,
+    "long": 108.277199
   },
   {
     "name": "Wallis & Futuna",
     "DFATsubRegion": "Pacific",
     "DFATdevelopingcountry": "dfatDev",
     "alpha3": "WLF",
-    "numericCountryCode": 876
+    "numericCountryCode": 876,
+    "alpha2": "WF",
+    "lat": -12.768752,
+    "long": -177.156097
   }
 ]
 
@@ -715,12 +886,9 @@ const outcomes = ["early","primary","secondary","special","attitude","pedagogica
 
 //create array of country names from data country keys
 const allCountries = data.map(({country}) => country);
-console.log(allCountries);
+
 // unique countries from 
 const countrylist = [...new Set(allCountries)];
-console.log(countrylist);
-
-
 
 //https://stackoverflow.com/questions/57550082/creating-a-16x16-grid-using-javascript
 
@@ -857,12 +1025,11 @@ function showSetting() {
 
 let width = d3.select("#chart").node().getBoundingClientRect().width;
 let height = d3.select("#chart").node().getBoundingClientRect().height;
-// console.log(width);
-// console.log(d3.select("#chart").node().getBoundingClientRect());
+
 
 //this is for flat map display
 var projection = d3.geoMercator()
-.scale(250)
+.scale(350)
   .translate([700, 300])
   .center([0, 0])
   .rotate([-165, 0]);
@@ -908,8 +1075,6 @@ function handleMouseover(d) {
   .append("g");
 
 
-
-
 function update(geojson) {
   var u = d3.select('g')
     .selectAll('path')
@@ -921,42 +1086,26 @@ u.enter()
     .attr("class", d => d.properties.name)
     .attr("class", d => d.properties.adm0_a3)
     .attr("name", d => d.properties.name_long)
-    .attr("text-anchor", "middle")
-    .attr("fill", "black")
+    //.attr("alpha", dfatCountries => dfatCountries.name)
+    // .attr("text-anchor", "middle")
+    // .attr("fill", "black")
     .classed(" land", true)
     .attr('d', geoGenerator)
     .on('mouseover', handleMouseover)
     .on('mouseover', );
-    
-    //this adds country names to the centre of the paths 
-    u.enter()
-      .append('text')
-      //.text(d => d.properties.name)
-      .text(function(d) {
-        for (i=0;i<u.length;i++) {
-          if(true) {
-          //if(dfatCountries.includes(d.properties.adm0_a3)) {
-          console.log(d.properties.adm0_a3);
-            return d.properties.name;
-            }
-          }
-        })
-      .attr("x", function(d) {
-        return geoGenerator.centroid(d)[0];})
-      .attr("y", function(d) {
-        return geoGenerator.centroid(d)[1];})
-      .attr("class","labels");
+}    
 
+//add colours to land paths and tippy for countries with studies
+function draw() {
+  let cpath = document.querySelectorAll(".land");
+  let cpathArray = Array.from(cpath);
 
-let cpath = document.querySelectorAll(".land");
-let cpathArray = Array.from(cpath);
-console.log(cpathArray);
 
 
   for (t=0; t<countrylist.length; t++) {
 
   for (i=0; i<cpathArray.length; i++) {
-    //console.log(cpathArray[i].classList);
+
     //this adds classes to paths from dfatCountries array to assist with css colours
     for(j=0;j<dfatCountries.length;j++) {
       if(cpathArray[i].classList.contains(dfatCountries[j].alpha3))
@@ -965,24 +1114,16 @@ console.log(cpathArray);
             cpathArray[i].classList.add(dfatCountries[j].DFATdevelopingcountry.replace(/\s+/g, ''));
     }
     let y = countrylist[t].toLowerCase().replace(/\s+/g, '');
+    
 
-
-      //this filters the square element array and creates a new variable to calculate the length to use as the radius of the circle. same filter is used in the tippy generator below
-      
-      //let pip = data.filter(it => it.country.toLowerCase().includes(y) && (cpathArray[i].id.includes(y)));
-      //console.log(pip);
-      //this compares the values in the data to the class list on the square element and if they match it adds the URL and author text to the tippy.
+      //this compares the values in the data.country to the id of the path element and if they match it adds the values below to the tippy.
       let pop = "";
       for(var j = 0; j < data.length; j++){
           if(data[j].country.toLowerCase().replace(/\s+/g, '').includes(y) && (cpathArray[i].id.includes(y))) {
-              //pop += "<a target=_blank" + ' href=' + data[j].URL + '>' + data[j].pop +'</a>' + '<br>';
-              
               pop += '</br><b>' + data[j].title + '</b>' + ' ' + data[j].authors + ' (' + data[j].year + ")" + '<br>' + "Key findings: " + data[j].findings + '<br>' + "<a target=_blank" + ' href=' + data[j].URL + '>' + data[j].URL +'</a></br>';
               cpathArray[i].classList.add("study");
           }
-              //this just displays author - use this if there no url in the data file
-              // else if(data[j].URL === "" && data[j].intervention === y && data[j].outcome.includes(z))
-              // pop += data[j].pop + '<br>';
+
       };
 
       if(!pop == "") {
@@ -991,7 +1132,7 @@ console.log(cpathArray);
           interactiveBorder: 30,
           maxWidth: '900px',
           content: '<b>' + data.filter(it => it.country.toLowerCase().replace(/\s+/g, '').includes(y)).length + " " + cpathArray[i].__data__.properties.name_long + '</b><br>' + pop,
-          followCursor: true,
+          followCursor: "initial",
           allowHTML: true,
           theme: "white",
           //placement: "top",
@@ -1009,25 +1150,57 @@ console.log(cpathArray);
 
 
 
-
-
 //REQUEST DATA
 d3.json('countries.json', function(error, json) {
   update(json)
+  labels()
+  draw()
 })
 
-//console.log(geojson);
+//puts svg circle in centre of dfat countries
+function labels() {
+  svg.selectAll(".pin")
+    .data(dfatCountries)
+    .enter().append("circle", ".pin")
+    .attr("r", 2)
+    .attr("stroke","black")
+    //.attr("stroke-width",".01")
+    .attr("class", d => d.DFATdevelopingcountry)
+    .attr("transform", function(d) {
+      return "translate(" + projection([
+        d.long,
+        d.lat
+      ]) + ")";
+    });
+
+  //svg country labels positioned by lat long from dfatcountries array
+  svg.selectAll('labels')
+    .data(dfatCountries)
+    .enter()
+      .append('text')
+      .text(d => d.name)
+      .attr("text-anchor", "middle")
+      .attr("fill", "black")
+      .attr("transform", function(d) {
+        return "translate(" + projection([
+          d.long,
+          d.lat + 1
+        ]) + ")";
+        })
+      .attr("class","labels");   
+}
+
 const legend = d3.select("#chart")
 
 //legend for map
 const keys = ["High Income", "Low and Middle Income", "Evidence available", "Not included"]
 
-// Usually you have a color scale in your chart already
+//color scale
 const color = d3.scaleOrdinal()
   .domain(keys)
   .range(["#1d8ba7","#859cd3", "#72118a", "#efefef"]);
 
-// Add one dot in the legend for each name.
+// legend squares
 const size = 20
 legend.selectAll()
   .data(keys)
@@ -1040,7 +1213,7 @@ legend.selectAll()
     .attr("height", size)
     .style("fill", function(d){ return color(d)})
 
-// Add one dot in the legend for each name.
+// legend categories from keys
 legend.selectAll("mylabels")
   .data(keys)
   .enter()
