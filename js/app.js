@@ -1198,8 +1198,9 @@ const keys = ["High Income", "Low and Middle Income", "Evidence available", "Not
 //color scale
 const color = d3.scaleOrdinal()
   .domain(keys)
-  .range(["#1d8ba7","#859cd3", "#72118a", "#efefef"]);
-
+  //this one was before olive's colour choice  
+  //.range(["#1d8ba7","#859cd3", "#72118a", "#efefef"]);
+  .range(["#1d8ba7","#859cd3", "#5c4063", "#efefef"]);
 // legend squares
 const size = 20
 legend.selectAll()

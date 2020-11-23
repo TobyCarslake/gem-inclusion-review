@@ -114,7 +114,7 @@ footer.bg-dark {
         margin-right: auto;
     }
 
-    #grid, .tog, {
+    #grid, .tog {
         width: auto;
         margin-left: auto;
         margin-right: auto;
@@ -152,7 +152,8 @@ stroke-width: 4;
     
 }
 #content .study {
-    fill: #72118a;
+    /* fill: #72118a; */
+    fill: #5c4063;
     /* stroke: white;
     stroke-width: 1; */
 
