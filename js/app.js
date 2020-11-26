@@ -976,28 +976,28 @@ for (var x = 0; x < studentGrids.length; x++) {
 }
 // function to show grids with teacher class and hide others
 function showTeacher() {
-    document.getElementById("grid").style.gridTemplateColumns = "repeat(4, 20vmin)";
+    document.getElementById("grid").style.gridTemplateColumns = "repeat(4, 25vmin)";
     document.getElementById("teacheroutcomes").style.gridColumn = "2/5";
-    Array.from(document.querySelectorAll(".setting,.student"))
-    .forEach(function(val) {
-        val.style.display = 'none';
-    });
     Array.from(document.querySelectorAll(".teacher"))
     .forEach(function(val) {
         val.style.display = 'grid';
-    });
-}
-// function to show grids with student class and hide others
-function showStudent() {
-    document.getElementById("grid").style.gridTemplateColumns = "repeat(3, 20vmin)";
-    document.getElementById("studentoutcomes").style.gridColumn = "2/4";
-    Array.from(document.querySelectorAll(".setting,.teacher"))
+    });Array.from(document.querySelectorAll(".setting,.student"))
     .forEach(function(val) {
         val.style.display = 'none';
     });
+
+}
+// function to show grids with student class and hide others
+function showStudent() {
+    document.getElementById("grid").style.gridTemplateColumns = "repeat(3, 33vmin)";
+    document.getElementById("studentoutcomes").style.gridColumn = "2/4";
     Array.from(document.querySelectorAll(".student"))
     .forEach(function(val) {
         val.style.display = 'grid';
+    });
+    Array.from(document.querySelectorAll(".setting,.teacher"))
+    .forEach(function(val) {
+        val.style.display = 'none';
     });
 }
 // function to show grids with setting class and hide others
@@ -1206,12 +1206,13 @@ const size = 20
 legend.selectAll()
   .data(keys)
   .enter()
-  .append("rect")
+  .append("circle")
+    .attr("r", 8)
     .attr("class","legend")
-    .attr("x", 5)
-    .attr("y", function(d,i){ return 400 + i*(size+5)}) // 100 is where the first dot appears. 25 is the distance between dots
-    .attr("width", size)
-    .attr("height", size)
+    .attr("stroke", "black")
+    .attr("stroke-width", 2)
+    .attr("cx", 12)
+    .attr("cy", function(d,i){ return 408 + i*(size+6)}) // 100 is where the first dot appears. 25 is the distance between dots
     .style("fill", function(d){ return color(d)})
 
 // legend categories from keys
@@ -1220,7 +1221,7 @@ legend.selectAll("mylabels")
   .enter()
   .append("text")
     .attr("x", 5 + size*1.2)
-    .attr("y", function(d,i){ return 400 + i*(size+5) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("y", function(d,i){ return 400 + i*(size+6) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
     .style("fill", "black")
     //.style("fill", function(d){ return color(d)})
     .text(function(d){ return d})
@@ -1257,6 +1258,12 @@ tippy("#studentlearning", {
 tippy("#studentbehaviour", {
   maxWidth: 500,
   content: "Improves the behaviour and engagement of children with disabilities.",
+  allowHTML: true,
+  appendTo: document.body
+});
+tippy("#interventions", {
+  maxWidth: 500,
+  content: "Professional learning that supports…",
   allowHTML: true,
   appendTo: document.body
 });

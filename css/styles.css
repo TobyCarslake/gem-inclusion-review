@@ -1,6 +1,6 @@
 .grid > div {
     border-style: solid;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Poppins', sans-serif;
     border-width: thin;
     font-size: 13px;
     border-color: whitesmoke;
@@ -52,6 +52,10 @@ circle:hover {
     stroke: rgb(58, 56, 56);    
     fill: darkslategray;
 }
+circle .legend :hover {
+
+}
+
 a {
     color: white;
 }
@@ -108,10 +112,10 @@ footer.bg-dark {
     }
     .grid {
         grid-template-columns: repeat(5, 20vmin);
-        max-width: 100%;
+        /* max-width: 100%;
         width: auto;
         margin-left: auto;
-        margin-right: auto;
+        margin-right: auto; */
     }
 
     #grid, .tog {
