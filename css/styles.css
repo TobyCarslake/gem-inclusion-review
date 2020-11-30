@@ -39,7 +39,7 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    line-height: .9rem;
+    /* line-height: ; */
     padding: 5px 10px;
 }
 circle {
@@ -48,7 +48,7 @@ circle {
 }
 
 /* to change svg circle on hover */
-circle:hover {
+#grid circle:hover {
     stroke: rgb(58, 56, 56);    
     fill: darkslategray;
 }
@@ -98,11 +98,11 @@ footer.bg-dark {
     }
     .interventionRow {
     font-size: .6em;
-    line-height: .7rem;
+    /* line-height: .7rem; */
     }
     .headRow {
         font-size: .7em;
-        line-height: .7rem;
+        /* line-height: .7rem; */
     }
     div.teacher {
         display: none;
@@ -123,6 +123,16 @@ footer.bg-dark {
         margin-left: auto;
         margin-right: auto;
     }
+    /* formatting for map tippy */
+    /* .tippy-box[data-theme~='white'] {
+        background-color: white;
+        color: black;
+        line-height: 100%;
+        border-style: solid;
+        border-width: .5px;
+    } */
+
+
 }
 @media only screen and (min-width: 979px) {
     .tog {
@@ -146,7 +156,7 @@ stroke-width: 4;
 #content .land {
     fill: #efefef;
     stroke: black;
-    stroke-width: .001;
+    stroke-width: .003;
 }
 #content .notDev {
     fill: #1d8ba7;
@@ -196,9 +206,9 @@ a.cntInfo:hover {
     color: gray;
 }
 
-.legend {
+/* .legend {
     background: lightslategray;
-}
+} */
 .labels {
     font-size: .7em;
     /* stroke: white;
