@@ -1,11 +1,9 @@
-// Quality of evidence	
-// Level 1 	Experimental Designs 
+// Quality of evidence
+// Level 1 	Experimental Designs
 // Level 2	Quasi-experimental Designs
-// Level 3	Observational – Analytic Designs 
-// Level 4	Observational –Descriptive Studies 
-// Level 5	Expert Opinion and Bench Research 
-
-
+// Level 3	Observational – Analytic Designs
+// Level 4	Observational –Descriptive Studies
+// Level 5	Expert Opinion and Bench Research
 
 const data = [
   {
@@ -961,7 +959,7 @@ for (i=0; i < allGridsArray.length; i++) {
     allowHTML: true,
     //theme: 'origTippy',
     //trigger: 'click',
-    placement: "right",
+    //placement: "right",
     boundary: 'parent',
     appendTo: 'parent',
     interactive: true
@@ -1031,10 +1029,9 @@ function showSetting() {
 //   .center([0, 5])
 //   .rotate([-100,0,0]);
 
-
+//sets width and height based on the container that the chart is in
 let width = d3.select("#chart").node().getBoundingClientRect().width;
 let height = d3.select("#chart").node().getBoundingClientRect().height;
-
 
 //this is for flat map display
 var projection = d3.geoMercator()
@@ -1046,43 +1043,18 @@ var projection = d3.geoMercator()
 var geoGenerator = d3.geoPath()
   .projection(projection);
 
-
 function handleMouseover(d) {
-
-  // var pixelArea = geoGenerator.area(d);
-  // var bounds = geoGenerator.bounds(d);
-  // var centroid = geoGenerator.centroid(d);
-  // var measure = geoGenerator.measure(d);
-
-  d3.select('#content .info')
-  //.text(d.properties.name + ' (path.area = ' + pixelArea.toFixed(1) + ' path.measure = ' + measure.toFixed(1) + ')');
-  .text(d.properties.name);
-
-  // d3.select('#content .bounding-box rect')
-  //   .attr('x', bounds[0][0])
-  //   .attr('y', bounds[0][1])
-  //   .attr('width', bounds[1][0] - bounds[0][0])
-  //   .attr('height', bounds[1][1] - bounds[0][1]);
-  // d3.select('#content .centroid')
-  //   .style('display', 'inline')
-  //   .attr('transform', 'translate(' + centroid + ')');
-    
 }
 
-
-  var svg = d3.select("#chart")
-  //.append("svg")
-  // .attr("width", width)
-  // .attr("height", height)
-  //.attr("viewBox", `0 0 900 900`)
-  .call(d3.zoom().on("zoom", function () {
-          svg.attr("transform", d3.event.transform)
-  }))
-  .append("svg")
-  .attr("width", width)
-  .attr("height", height)
-  .append("g");
-
+//create svg on chart element; add zoom function
+var svg = d3.select("#chart")
+            .call(d3.zoom().on("zoom", function () {
+            svg.attr("transform", d3.event.transform)
+            }))
+            .append("svg")
+            .attr("width", width)
+            .attr("height", height)
+            .append("g");
 
 function update(geojson) {
   var u = d3.select('g')
@@ -1108,9 +1080,6 @@ u.enter()
 function draw() {
   let cpath = document.querySelectorAll(".land");
   let cpathArray = Array.from(cpath);
-
-
-
   for (t=0; t<countrylist.length; t++) {
 
   for (i=0; i<cpathArray.length; i++) {
@@ -1126,14 +1095,14 @@ function draw() {
     
 
       //this compares the values in the data.country to the id of the path element and if they match it adds the values below to the tippy.
-      let pop = "";
-      for(var j = 0; j < data.length; j++){
-          if(data[j].country.toLowerCase().replace(/\s+/g, '').includes(y) && (cpathArray[i].id.includes(y))) {
-              pop += '</br><b>' + data[j].title + '</b>' + ' ' + data[j].authors + ' (' + data[j].year + ")" + '<br>' + "Key findings: " + data[j].findings + '<br>' + "<a target=_blank" + ' href=' + data[j].URL + '>' + data[j].URL +'</a></br>';
-              cpathArray[i].classList.add("study");
-          }
+    let pop = "";
+    for(var j = 0; j < data.length; j++){
+        if(data[j].country.toLowerCase().replace(/\s+/g, '').includes(y) && (cpathArray[i].id.includes(y))) {
+            pop += '</br><b>' + data[j].title + '</b>' + ' ' + data[j].authors + ' (' + data[j].year + ")" + '<br>' + "Key findings: " + data[j].findings + '<br>' + "<a target=_blank" + ' href=' + data[j].URL + '>' + data[j].URL +'</a></br>';
+            cpathArray[i].classList.add("study");
+        }
 
-      };
+    };
 
       if(!pop == "") {
           tippy("#" + cpathArray[i].id, {
@@ -1157,8 +1126,6 @@ function draw() {
   };
 };
 }
-
-
 
 //REQUEST DATA
 d3.json('countries.json', function(error, json) {
@@ -1200,11 +1167,9 @@ function labels() {
       .attr("class","labels");   
 }
 
-const legend = d3.select("#chart")
-
 //legend for map
+const legend = d3.select("#chart")
 const keys = ["High Income", "Low and Middle Income", "Evidence available", "Not included"]
-
 //color scale
 const color = d3.scaleOrdinal()
   .domain(keys)
@@ -1235,8 +1200,6 @@ legend.selectAll("mylabels")
     .text(function(d){ return d})
     .attr("text-anchor", "left")
     .style("alignment-baseline", "middle")
-
-
 
 // hovers for outcomes descriptions
 tippy("#teacherattitudes", {
@@ -1276,38 +1239,6 @@ tippy("#interventions", {
   appendTo: 'parent'
 });
 
-// filterSelection("all")
-// function filterSelection(c) {
-//   var x, i;
-//   x = document.getElementsByClassName("filterDiv");
-//   if (c == "all") c = "";
-//   for (i = 0; i < x.length; i++) {
-//     RemoveClass(x[i], "show");
-//     if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
-//   }
-// }
-
-// function AddClass(element, name) {
-//   var i, arr1, arr2;
-//   arr1 = element.className.split(" ");
-//   arr2 = name.split(" ");
-//   for (i = 0; i < arr2.length; i++) {
-//     if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
-//   }
-// }
-
-// function RemoveClass(element, name) {
-//   var i, arr1, arr2;
-//   arr1 = element.className.split(" ");
-//   arr2 = name.split(" ");
-//   for (i = 0; i < arr2.length; i++) {
-//     while (arr1.indexOf(arr2[i]) > -1) {
-//       arr1.splice(arr1.indexOf(arr2[i]), 1);     
-//     }
-//   }
-//   element.className = arr1.join(" ");
-// }
-
 // Add active class to the current country button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btnCountry");
@@ -1317,6 +1248,7 @@ for (var i = 0; i < btns.length; i++) {
     const current = all.querySelectorAll(".active");
     current[0].className = current[0].className.replace(" active", "");
     this.className += " active";
+    //this.textContent = val + " (" + data.filter(it => it.country.toLowerCase().includes(val)).length + ")";
   });
 }
 // Add active class to the current outcomes button (highlight it)
@@ -1330,38 +1262,20 @@ for (var i = 0; i < outcomebtns.length; i++) {
     this.className += " active";
   });
 }
-
-//parent = document.querySelector('.parent');
-//children = parent.children; // [<div class="child1">]
-
-
 function removeTipCircles (){
   var list = document.querySelectorAll(".square");
- // console.log(list);
-
-  // As long as <ul> has a child node, remove it
-  for(i=0;i<list.length;i++){
-    while (list[i].hasChildNodes()) {  
-      list[i].removeChild(list[i].firstChild);
+  // As long as .square has a child node, remove it
+    for(i=0;i<list.length;i++){
+      while (list[i].hasChildNodes()) {  
+        list[i].removeChild(list[i].firstChild);
+      }
     }
-}
-//https://github.com/atomiks/tippyjs/issues/473
-[...document.querySelectorAll('.square')].forEach(node => {
-  if (node._tippy) {
-    node._tippy.destroy();
-  }
-});
-  // #physicalsecondary > svg > circle
-// d3.select("square.parent").selectAll("*").remove();
-
-//  d3.select(".grid").selectAll(".circle").remove();
-
-// // d3.selectAll('circle').remove();
-// // d3.selectAll('.circle').remove();
-//d3.select('.square').selectAll('_tippy').destroy();
-// d3.selectAll('.tippy-box').remove();
-// d3.selectAll('.tippy-content').remove();
-// d3.selectAll('.tippy-arrow').remove();
+  //https://github.com/atomiks/tippyjs/issues/473
+  [...document.querySelectorAll('.square')].forEach(node => {
+    if (node._tippy) {
+      node._tippy.destroy();
+    }
+  });
 }
 
 function countryFilter(val) {
@@ -1382,21 +1296,12 @@ console.log(pip);
   for(var j = 0; j < countryData.length; j++){
       if(countryData[j].intervention.toLowerCase().includes(y) && countryData[j].outcomes.toLowerCase().includes(z))
           pop += "<a target=_blank" + ' href=' + countryData[j].URL + '>' + countryData[j].pop +'</a>' + '<br>';
-
-          //this just displays author - use this if there no url in the data file
-          // else if(data[j].URL === "" && data[j].intervention === y && data[j].outcome.includes(z))
-          // pop += data[j].pop + '<br>';
   };
-  
-
-  // if(pop.length > 0 && !allGridsArray[i].class.contains('filter'))
   if(pop.length > 0)
   tippy("#" + allGridsArray[i].id, {
   maxWidth: '',
   content: '<p>' + countryData.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z)).length + '</p>' + pop,
   allowHTML: true,
-  //trigger: 'click',
-  placement: "right",
   boundary: 'parent',
   appendTo: 'parent',
   interactive: true
@@ -1405,3 +1310,10 @@ console.log(pip);
 };
 countryData = '';
 }
+//add number of studies to country button text
+document.getElementById("btnChina").textContent = "China (" + data.filter(it => it.country.toLowerCase().includes('china')).length + ")";
+document.getElementById("btnIndia").textContent = "India (" + data.filter(it => it.country.toLowerCase().includes('india')).length + ")";
+document.getElementById("btnPakistan").textContent = "Pakistan (" + data.filter(it => it.country.toLowerCase().includes('pakistan')).length + ")";
+document.getElementById("btnSriLanka").textContent = "Sri Lanka (" + data.filter(it => it.country.toLowerCase().includes('sri lanka')).length + ")";
+document.getElementById("btnThailand").textContent = "Thailand (" + data.filter(it => it.country.toLowerCase().includes('thailand')).length + ")";
+document.getElementById("btnVietnam").textContent = "Vietnam (" + data.filter(it => it.country.toLowerCase().includes('vietnam')).length + ")";

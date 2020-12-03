@@ -10,17 +10,10 @@
 <link href="https://fonts.googleapis.com/css?family=Poppins:200,400,500,600,700%7CRoboto" rel="stylesheet">
 <link rel="stylesheet" href="https://www.acer.org/assets/css/dest/bootstrap/acer-bootstrap-4.3.1.min.css?1599614323">
 <link rel="stylesheet" href="https://www.acer.org/assets/css/dest/acer-base-1.min.css" />
-<!-- <link rel="stylesheet" href="https://www.acer.org/assets/css/dest/acer-base-1.min.css?1600320829" />
-<link rel="stylesheet" href="https://www.acer.org/assets/css/dest/sections/great-britain.min.css?1600320829" /> -->
-<!-- <link href="https://unpkg.com/tippy.js@6/animations/scale.css"> -->
 <link href="https://unpkg.com/tippy.js/dist/tippy.css">
-<!-- <link rel="stylesheet" href="https://unpkg.com/tippy.js@5/dist/backdrop.css" /> -->
-<!-- <link rel="stylesheet" href="https://unpkg.com/tippy.js@5/themes/light.css" /> -->
 <link rel="stylesheet" href="css/styles.css">
 <script src="https://d3js.org/d3.v4.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
-<!-- <script src="https://unpkg.com/topojson-client@3"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script> -->
 <style>
 
 </style>
@@ -63,24 +56,18 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
         <p>This map shows further detailed information about the studies included in this review. By clicking on countries on this map summaries of the studies conducted in those countries and the links to their sources are easily available. Therefore policymakers interested in particular countries may quickly assess the status of evidence available in any country in the region by clicking on this map.  </p>
     </div>
     <div id="content">
-        <!-- <div class="info">Hover over a country</div> -->
-
-        <svg id="chart">
-        <!-- <g class="map"></g> -->
-
-        </svg>
+        <svg id="chart"></svg>
 
         <h2>Evidence and Gap Map</h2>
             <p>The Evidence and Gap Map (EGM) is usually represented as a chart that includes the intervention categories or the focus of the intervention (based on the type of disabilities) as rows and setting and outcome domains as columns. It visually displays how much evidence is available under a particular domain and therefore also shows any gaps in the evidence. The size of the bubble represents the amount of evidence that is available and the number of studies and key info (including links to the actual study) can be found by hovering over the bubble corresponding to that cell.</p>
         <div id="myBtnContainer">
             <button class="btn btnCountry btn-outline-dark btn-sm active" onclick="circlesAndTippys()"> Show all</button>
-            <button class="btn btnCountry btn-outline-dark btn-sm" value="china" onclick="countryFilter(this.value)"> China</button>
-            <button class="btn btnCountry btn-outline-dark btn-sm" value="india" onclick="countryFilter(this.value)"> India</button>
-            <button class="btn btnCountry btn-outline-dark btn-sm" value="pakistan" onclick="countryFilter(this.value)"> Pakistan</button>
-            <button class="btn btnCountry btn-outline-dark btn-sm" value="sri lanka" onclick="countryFilter(this.value)"> Sri Lanka</button>
-            <button class="btn btnCountry btn-outline-dark btn-sm" value="thailand" onclick="countryFilter(this.value)"> Thailand</button>
-            <button class="btn btnCountry btn-outline-dark btn-sm" value="vietnam" onclick="countryFilter(this.value)"> Vietnam</button>
-            
+            <button id="btnChina" class="btn btnCountry btn-outline-dark btn-sm" value="china" onclick="countryFilter(this.value)"> China</button>
+            <button id="btnIndia" class="btn btnCountry btn-outline-dark btn-sm" value="india" onclick="countryFilter(this.value)"> India</button>
+            <button id="btnPakistan" class="btn btnCountry btn-outline-dark btn-sm" value="pakistan" onclick="countryFilter(this.value)"> Pakistan</button>
+            <button id="btnSriLanka" class="btn btnCountry btn-outline-dark btn-sm" value="sri lanka" onclick="countryFilter(this.value)"> Sri Lanka</button>
+            <button id="btnThailand" class="btn btnCountry btn-outline-dark btn-sm" value="thailand" onclick="countryFilter(this.value)"> Thailand</button>
+            <button id="btnVietnam" class="btn btnCountry btn-outline-dark btn-sm" value="vietnam" onclick="countryFilter(this.value)"> Vietnam</button>  
         </div>
         <div id="tog" class="tog">
         </br>

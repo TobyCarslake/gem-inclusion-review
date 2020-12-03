@@ -2,7 +2,7 @@
     border-style: solid;
     font-family: 'Poppins', sans-serif;
     border-width: thin;
-    font-size: 13px;
+    
     border-color: whitesmoke;
 }
 .grid {
@@ -10,7 +10,8 @@
     max-width: 1110px;
     grid-template-rows: repeat(6, 60px);
     grid-template-columns: 200px repeat(9, minmax(50px, 100px));
-    margin: auto;   
+    margin: auto;
+    font-size: .8em; 
 }
 #setting {
     grid-column: 2/6;
@@ -51,9 +52,6 @@ circle {
 #grid circle:hover {
     stroke: rgb(58, 56, 56);    
     fill: darkslategray;
-}
-circle .legend :hover {
-
 }
 .filter {
     display: none;
@@ -99,11 +97,11 @@ footer.bg-dark {
         width: auto;
     }
     .interventionRow {
-    font-size: .5em; 
+        font-size: .5em; 
     /* line-height: .7rem; */
     }
     .headRow {
-        font-size: .7em;
+        font-size: .8em;
         /* line-height: .7rem; */
     }
     div.teacher {
