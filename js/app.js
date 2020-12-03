@@ -925,18 +925,22 @@ for (x of interventions) {
         content: x.desc,
         
         allowHTML: true,
-        appendTo: document.body
+        appendTo: 'parent'
+        //appendTo: document.body
     });
 }
-
+//execute tippys and circles for grid
+circlesAndTippys();
 //this uses the array of elements with a class of square created above and thier first (intervention) and second (outcome) classes as values to use in the filter search
+function circlesAndTippys() {
+removeTipCircles();
 for (i=0; i < allGridsArray.length; i++) {
     let y = allGridsArray[i].classList[0];
     let z = allGridsArray[i].classList[1];
     //this filters the square element array and creates a new variable to calculate the length to use as the radius of the circle. same filter is used in the tippy generator below
     let pip = data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z));
-    allGridsArray[i].innerHTML += '<svg class="circle' + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length * 7 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
-
+    allGridsArray[i].innerHTML += '<svg class="circle show' + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length * 7 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
+  //console.log(pip);
     //this compares the values in the data to the class list on the square element and if they match it adds the URL and author text to the tippy.
     let pop = "";
     for(var j = 0; j < data.length; j++){
@@ -948,18 +952,23 @@ for (i=0; i < allGridsArray.length; i++) {
             // pop += data[j].pop + '<br>';
     };
     
+
+    // if(pop.length > 0 && !allGridsArray[i].class.contains('filter'))
     if(pop.length > 0)
     tippy("#" + allGridsArray[i].id, {
     maxWidth: '',
     content: '<p>' + data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z)).length + '</p>' + pop,
     allowHTML: true,
+    //theme: 'origTippy',
+    //trigger: 'click',
     placement: "right",
     boundary: 'parent',
-    appendTo: document.body,
+    appendTo: 'parent',
     interactive: true
     });
     pop = '';
 };
+}
 // set variables for grids in each outcome area
 let settingGrids = document.querySelectorAll(".setting,.early,.primary,.secondary,.special");
 let teacherGrids = document.querySelectorAll(".attitude,.pedagogical,.managing");
@@ -1138,7 +1147,8 @@ function draw() {
           //placement: "top",
           //arrow: "false",
           boundary: 'parent',
-          sticky: 'true',
+          //sticky: 'true',
+          //appendTo: 'parent',
           appendTo: document.body,
           interactive: true
           });
@@ -1157,7 +1167,7 @@ d3.json('countries.json', function(error, json) {
   draw()
 })
 
-//puts svg circle in centre of dfat countries
+//puts svg circle in centre of dfat countries using latitude and longitude
 function labels() {
   svg.selectAll(".pin")
     .data(dfatCountries)
@@ -1198,10 +1208,8 @@ const keys = ["High Income", "Low and Middle Income", "Evidence available", "Not
 //color scale
 const color = d3.scaleOrdinal()
   .domain(keys)
-  //this one was before olive's colour choice  
-  //.range(["#1d8ba7","#859cd3", "#72118a", "#efefef"]);
   .range(["#1d8ba7","#859cd3", "#5c4063", "#efefef"]);
-// legend squares
+// draw legend circles
 const size = 20
 legend.selectAll()
   .data(keys)
@@ -1215,7 +1223,7 @@ legend.selectAll()
     .attr("cy", function(d,i){ return 408 + i*(size+6)}) // 100 is where the first dot appears. 25 is the distance between dots
     .style("fill", function(d){ return color(d)})
 
-// legend categories from keys
+// draw legend text categories from keys const
 legend.selectAll("mylabels")
   .data(keys)
   .enter()
@@ -1235,35 +1243,165 @@ tippy("#teacherattitudes", {
   maxWidth: 500,
   content: "Relates to teachers’ attitudes (acceptance, confidence, and self- efficacy) towards children with disabilities and knowledge about and understanding of inclusive practices.",
   allowHTML: true,
-  appendTo: document.body
+  appendTo: 'parent'
 });
 tippy("#teacherpedagogical", {
   maxWidth: 500,
   content: "Focuses on teachers’ gaining skills to improve pedagogical practice for the purpose of improving inclusive practices and educational outcomes for children with disabilities.",
   allowHTML: true,
-  appendTo: document.body
+  appendTo: 'parent'
 });
 tippy("#teachermanaging", {
   maxWidth: 500,
   content: "Enables teachers to develop strategies to more effectively manage behaviour issues among children with disabilities.",
   allowHTML: true,
-  appendTo: document.body
+  appendTo: 'parent'
 });
 tippy("#studentlearning", {
   maxWidth: 500,
   content: "Results in positive learning and achievement outcomes for children with disabilities.",
   allowHTML: true,
-  appendTo: document.body
+  appendTo: 'parent'
 });
 tippy("#studentbehaviour", {
   maxWidth: 500,
   content: "Improves the behaviour and engagement of children with disabilities.",
   allowHTML: true,
-  appendTo: document.body
+  appendTo: 'parent'
 });
 tippy("#interventions", {
   maxWidth: 500,
   content: "Professional learning that supports…",
   allowHTML: true,
-  appendTo: document.body
+  appendTo: 'parent'
 });
+
+// filterSelection("all")
+// function filterSelection(c) {
+//   var x, i;
+//   x = document.getElementsByClassName("filterDiv");
+//   if (c == "all") c = "";
+//   for (i = 0; i < x.length; i++) {
+//     RemoveClass(x[i], "show");
+//     if (x[i].className.indexOf(c) > -1) AddClass(x[i], "show");
+//   }
+// }
+
+// function AddClass(element, name) {
+//   var i, arr1, arr2;
+//   arr1 = element.className.split(" ");
+//   arr2 = name.split(" ");
+//   for (i = 0; i < arr2.length; i++) {
+//     if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+//   }
+// }
+
+// function RemoveClass(element, name) {
+//   var i, arr1, arr2;
+//   arr1 = element.className.split(" ");
+//   arr2 = name.split(" ");
+//   for (i = 0; i < arr2.length; i++) {
+//     while (arr1.indexOf(arr2[i]) > -1) {
+//       arr1.splice(arr1.indexOf(arr2[i]), 1);     
+//     }
+//   }
+//   element.className = arr1.join(" ");
+// }
+
+// Add active class to the current country button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btnCountry");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    const all = document.getElementById('myBtnContainer');
+    const current = all.querySelectorAll(".active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+// Add active class to the current outcomes button (highlight it)
+var outcomebtnsContainer = document.getElementById("tog");
+var outcomebtns = outcomebtnsContainer.getElementsByClassName("btnOutcomes");
+for (var i = 0; i < outcomebtns.length; i++) {
+  outcomebtns[i].addEventListener("click", function(){
+    const all = document.getElementById('tog');
+    const current = all.querySelectorAll(".active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+
+//parent = document.querySelector('.parent');
+//children = parent.children; // [<div class="child1">]
+
+
+function removeTipCircles (){
+  var list = document.querySelectorAll(".square");
+ // console.log(list);
+
+  // As long as <ul> has a child node, remove it
+  for(i=0;i<list.length;i++){
+    while (list[i].hasChildNodes()) {  
+      list[i].removeChild(list[i].firstChild);
+    }
+}
+//https://github.com/atomiks/tippyjs/issues/473
+[...document.querySelectorAll('.square')].forEach(node => {
+  if (node._tippy) {
+    node._tippy.destroy();
+  }
+});
+  // #physicalsecondary > svg > circle
+// d3.select("square.parent").selectAll("*").remove();
+
+//  d3.select(".grid").selectAll(".circle").remove();
+
+// // d3.selectAll('circle').remove();
+// // d3.selectAll('.circle').remove();
+//d3.select('.square').selectAll('_tippy').destroy();
+// d3.selectAll('.tippy-box').remove();
+// d3.selectAll('.tippy-content').remove();
+// d3.selectAll('.tippy-arrow').remove();
+}
+
+function countryFilter(val) {
+removeTipCircles();
+
+for (i=0; i < allGridsArray.length; i++) {
+  let countryData = data.filter(it => it.country.toLowerCase().includes(val));
+  console.log(countryData);
+  
+  let y = allGridsArray[i].classList[0];
+  let z = allGridsArray[i].classList[1];
+  //this filters the square element array and creates a new variable to calculate the length to use as the radius of the circle. same filter is used in the tippy generator below
+  let pip = countryData.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z));
+  allGridsArray[i].innerHTML += '<svg class="circle' + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length * 7 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
+console.log(pip);
+  //this compares the values in the data to the class list on the square element and if they match it adds the URL and author text to the tippy.
+  let pop = "";
+  for(var j = 0; j < countryData.length; j++){
+      if(countryData[j].intervention.toLowerCase().includes(y) && countryData[j].outcomes.toLowerCase().includes(z))
+          pop += "<a target=_blank" + ' href=' + countryData[j].URL + '>' + countryData[j].pop +'</a>' + '<br>';
+
+          //this just displays author - use this if there no url in the data file
+          // else if(data[j].URL === "" && data[j].intervention === y && data[j].outcome.includes(z))
+          // pop += data[j].pop + '<br>';
+  };
+  
+
+  // if(pop.length > 0 && !allGridsArray[i].class.contains('filter'))
+  if(pop.length > 0)
+  tippy("#" + allGridsArray[i].id, {
+  maxWidth: '',
+  content: '<p>' + countryData.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z)).length + '</p>' + pop,
+  allowHTML: true,
+  //trigger: 'click',
+  placement: "right",
+  boundary: 'parent',
+  appendTo: 'parent',
+  interactive: true
+  });
+  pop = '';
+};
+countryData = '';
+}

@@ -55,7 +55,9 @@ circle {
 circle .legend :hover {
 
 }
-
+.filter {
+    display: none;
+}
 a {
     color: white;
 }
@@ -72,7 +74,7 @@ a:hover {
     background: lightblue;
 }
 .tippy-box {
-    font-size: .8em;
+    /* font-size: .9em; */
     background-color:#333333;
     color: white;
     opacity: 1;
@@ -92,12 +94,12 @@ footer.bg-dark {
     margin-right: 10px!important;
 }
 
-@media only screen and (max-width: 979px) {
+@media only screen and (max-width: 1025px) {
     body {
-        width: auto;        
+        width: auto;
     }
     .interventionRow {
-    font-size: .6em;
+    font-size: .5em; 
     /* line-height: .7rem; */
     }
     .headRow {
@@ -134,7 +136,7 @@ footer.bg-dark {
 
 
 }
-@media only screen and (min-width: 979px) {
+@media only screen and (min-width: 1025px) {
     .tog {
         display: none;
     }
@@ -187,6 +189,8 @@ a.cntInfo:hover {
 }
 /* formatting for map tippy */
 .tippy-box[data-theme~='white'] {
+    font-family: 'Poppins', sans-serif;
+    font-size: .8em;
     background-color: white;
     color: black;
     line-height: 1.1em;
@@ -215,3 +219,36 @@ a.cntInfo:hover {
     stroke-width: .1; */
     cursor: default;
 }
+/* .btn {
+    color: #7E277E;
+    border-color: #7E277E;
+    
+}
+.btn:hover {
+    background-color: #7E277E;
+    color:white;
+}
+.btn:active {
+    background-color: #7E277E;
+    color:white;
+} */
+
+.filterDiv {
+    float: left;
+    background-color: #2196F3;
+    color: #ffffff;
+    width: 100px;
+    line-height: 100px;
+    text-align: center;
+    margin: 2px;
+    display: none; /* Hidden by default */
+  }
+  
+  /* The "show" class is added to the filtered elements */
+  .hide {
+      display: none;
+  }
+
+  .show {
+    display: block;
+  }
