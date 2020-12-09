@@ -14,6 +14,10 @@
 <link rel="stylesheet" href="css/styles.css">
 <script src="https://d3js.org/d3.v4.js"></script>
 <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
+<script src="https://d3js.org/d3-quadtree.v1.min.js"></script>
+<script src="https://d3js.org/d3-timer.v1.min.js"></script>
+<script src="https://d3js.org/d3-force.v2.min.js"></script>
 <style>
 
 </style>
@@ -27,7 +31,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 })(window,document,'script','dataLayer','GTM-KRVFTV8');</script>
 <!-- End Google Tag Manager -->
 <body>
-
+<!-- <body onresize="circlesAndTippys()"> -->
 <nav id="dropdown-nav">
 <div class="consistent-top-navbar navbar navbar-expand-lg international-office-animated-nav navbar-light bg-white fixed-top navbar-static-top scrolled-nav">
 <div class="container animated-collapse-icon">
@@ -64,6 +68,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             <button class="btn btnCountry btn-outline-dark btn-sm active" onclick="circlesAndTippys()"> Show all</button>
             <button id="btnChina" class="btn btnCountry btn-outline-dark btn-sm" value="china" onclick="countryFilter(this.value)"> China</button>
             <button id="btnIndia" class="btn btnCountry btn-outline-dark btn-sm" value="india" onclick="countryFilter(this.value)"> India</button>
+            <button id="btnMalaysia" class="btn btnCountry btn-outline-dark btn-sm" value="malaysia" onclick="countryFilter(this.value)"> Malaysia</button>
             <button id="btnPakistan" class="btn btnCountry btn-outline-dark btn-sm" value="pakistan" onclick="countryFilter(this.value)"> Pakistan</button>
             <button id="btnSriLanka" class="btn btnCountry btn-outline-dark btn-sm" value="sri lanka" onclick="countryFilter(this.value)"> Sri Lanka</button>
             <button id="btnThailand" class="btn btnCountry btn-outline-dark btn-sm" value="thailand" onclick="countryFilter(this.value)"> Thailand</button>
@@ -107,7 +112,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <div class="setting special headRow" tabindex="0">
         Special
     </div>
-    <div id ="teacherattitudes" class="outcomes teacher attitudes headRow" tabindex="0">
+    <div id ="teacherattitude" class="outcomes teacher attitude headRow" tabindex="0">
         Attitudes/ Knowledge
     </div>
     <div id ="teacherpedagogical" class="outcomes teacher pedagogical headRow" tabindex="0">

@@ -1,9 +1,4 @@
-// Quality of evidence
-// Level 1 	Experimental Designs
-// Level 2	Quasi-experimental Designs
-// Level 3	Observational – Analytic Designs
-// Level 4	Observational –Descriptive Studies
-// Level 5	Expert Opinion and Bench Research
+
 
 const data = [
   {
@@ -16,7 +11,7 @@ const data = [
     "authors": "Agbenyega, Joseph Seyram; Klibthong, Sunanta",
     "year": 2015,
     "country": "Thailand",
-    "quality": "Level 3",
+    "quality": "low",
     "pop": "Agbenyega 2015, Thailand",
     "intervention": "Inclusive",
     "outcomes": "Early,Attitude,Pedagogical"
@@ -31,7 +26,7 @@ const data = [
     "authors": "Cheng, Li-Rong Lilly; Wallach, Geraldine P.; Reed, Vicki A.",
     "year": 2015,
     "country": "China",
-    "quality": "Level 3",
+    "quality": "low",
     "pop": "Cheng 2015, China",
     "intervention": "Intellectual,Sensory",
     "outcomes": "Primary,Secondary,Attitude"
@@ -46,7 +41,7 @@ const data = [
     "authors": "Eng, Peng-Sim",
     "year": 2015,
     "country": "Vietnam",
-    "quality": "Level 3",
+    "quality": "low",
     "pop": "Eng 2015, Vietnam",
     "intervention": "Physical,Intellectual,Sensory",
     "outcomes": "Special,Pedagogical,Managing,Learning,Behaviour"
@@ -61,7 +56,7 @@ const data = [
     "authors": "Hai, Nguyen Xuan; Villa, Richard A.; Le Van Tac; Thousand, Jacqueline S.; Pham Minh Muc",
     "year": 2020,
     "country": "Vietnam",
-    "quality": "Level 3",
+    "quality": "low",
     "pop": "Hai 2020, Vietnam",
     "intervention": "Inclusive",
     "outcomes": "Primary,Attitude,Pedagogical,Learning,Behaviour"
@@ -76,7 +71,7 @@ const data = [
     "authors": "Hussein, S. A.; Vostanis, P.",
     "year": 2013,
     "country": "Pakistan",
-    "quality": "Level 2",
+    "quality": "medium",
     "pop": "Hussein 2013, Pakistan",
     "intervention": "Intellectual",
     "outcomes": "Primary,Attitude,Managing"
@@ -91,7 +86,7 @@ const data = [
     "authors": "Kantavong, Pennee; Sivabaedya, Suwaree",
     "year": 2010,
     "country": "Thailand",
-    "quality": "Level 2",
+    "quality": "medium",
     "pop": "Kantavong 2010, Thailand",
     "intervention": "Intellectual",
     "outcomes": "Primary,Attitude,Pedagogical,Learning"
@@ -106,7 +101,7 @@ const data = [
     "authors": "Klibthong, S.; Agbenyega, J.S.",
     "year": 2018,
     "country": "Thailand",
-    "quality": "Level 3",
+    "quality": "low",
     "pop": "Klibthong 2018, Thailand",
     "intervention": "Inclusive",
     "outcomes": "Early,Attitude"
@@ -121,7 +116,7 @@ const data = [
     "authors": "Locharoenrat, Weeramol",
     "year": 2019,
     "country": "Thailand",
-    "quality": "Level 1",
+    "quality": "high",
     "pop": "Locharoenrat 2019, Thailand",
     "intervention": "Inclusive",
     "outcomes": "Primary,Secondary,Managing"
@@ -136,7 +131,7 @@ const data = [
     "authors": "Martin, David S.; Craft, Anna; Sheng, Zhang Ning",
     "year": 2001,
     "country": "China",
-    "quality": "Level 2",
+    "quality": "medium",
     "pop": "Martin 2001, China",
     "intervention": "Sensory",
     "outcomes": "Special,Pedagogical,Learning,Behaviour"
@@ -151,7 +146,7 @@ const data = [
     "authors": "McCabe, Helen",
     "year": 2008,
     "country": "China",
-    "quality": "Level 3",
+    "quality": "low",
     "pop": "McCabe 2008, China",
     "intervention": "Intellectual",
     "outcomes": "Special,Attitude,Pedagogical"
@@ -166,7 +161,7 @@ const data = [
     "authors": "Muttiah, N., Drager, K. D., McNaughton, D., & Perera, N.",
     "year": 2018,
     "country": "Sri Lanka",
-    "quality": "Level 2",
+    "quality": "medium",
     "pop": "Muttiah 2018, Sri Lanka",
     "intervention": "Inclusive",
     "outcomes": "Special,Attitude,Pedagogical,Behaviour"
@@ -181,7 +176,7 @@ const data = [
     "authors": "Opartkiattikul, W.; Arthur-Kelly, M.; Dempsey, I.",
     "year": 2015,
     "country": "Thailand",
-    "quality": "Level 3",
+    "quality": "low",
     "pop": "Opartkiattikul 2015, Thailand",
     "intervention": "Inclusive",
     "outcomes": "Primary,Managing,Behaviour"
@@ -196,7 +191,7 @@ const data = [
     "authors": "Salim, Abdul; Hidayatullah, M. Furqon; Nugraheni, Permata Primadhita; W., Dian Atnantomi",
     "year": 2019,
     "country": "Indonesia",
-    "quality": "Level 2",
+    "quality": "medium",
     "pop": "Salim 2019, Indonesia",
     "intervention": "Inclusive",
     "outcomes": "Primary,Attitude"
@@ -211,7 +206,7 @@ const data = [
     "authors": "Shah, H.; Kumar, D.",
     "year": 2012,
     "country": "India",
-    "quality": "Level 3",
+    "quality": "low",
     "pop": "Shah 2012, India",
     "intervention": "Intellectual",
     "outcomes": "Primary,Attitude,Pedagogical"
@@ -226,7 +221,7 @@ const data = [
     "authors": "Simpson, Lisa A.; Sharon Qi; Kan He; Qing Qing Tao",
     "year": 2016,
     "country": "China",
-    "quality": "Level 3",
+    "quality": "low",
     "pop": "Simpson 2016, China",
     "intervention": "Intellectual",
     "outcomes": "Special,Pedagogical"
@@ -241,7 +236,7 @@ const data = [
     "authors": "Srivastava, Meenakshi; de Boer, Anke A.; Pijl, Sip Jan",
     "year": 2015,
     "country": "India",
-    "quality": "Level 1",
+    "quality": "high",
     "pop": "Srivastava 2015, India",
     "intervention": "Inclusive",
     "outcomes": "Primary,Attitude,Pedagogical"
@@ -256,7 +251,7 @@ const data = [
     "authors": "Xie, Huichao; Chen, Ching-I; Chen, Chieh-Yu; Squires, Jane; Li, Wenge; Liu, Tian",
     "year": 2017,
     "country": "China",
-    "quality": "Level 2",
+    "quality": "medium",
     "pop": "Xie 2017, China",
     "intervention": "Inclusive",
     "outcomes": "Early,Attitude"
@@ -271,7 +266,7 @@ const data = [
     "authors": "Yusuf, B.",
     "year": 2017,
     "country": "Malaysia",
-    "quality": "Level 3",
+    "quality": "low",
     "pop": "Yusuf 2017, Malaysia",
     "intervention": "Inclusive",
     "outcomes": "Primary,Secondary,Pedagogical"
@@ -927,46 +922,204 @@ for (x of interventions) {
         //appendTo: document.body
     });
 }
+
+const qualityCategory = ["low","medium","high"];
 //execute tippys and circles for grid
 circlesAndTippys();
 //this uses the array of elements with a class of square created above and thier first (intervention) and second (outcome) classes as values to use in the filter search
-function circlesAndTippys() {
-removeTipCircles();
-for (i=0; i < allGridsArray.length; i++) {
-    let y = allGridsArray[i].classList[0];
-    let z = allGridsArray[i].classList[1];
-    //this filters the square element array and creates a new variable to calculate the length to use as the radius of the circle. same filter is used in the tippy generator below
-    let pip = data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z));
-    allGridsArray[i].innerHTML += '<svg class="circle show' + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length * 7 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
-  //console.log(pip);
-    //this compares the values in the data to the class list on the square element and if they match it adds the URL and author text to the tippy.
-    let pop = "";
-    for(var j = 0; j < data.length; j++){
-        if(data[j].intervention.toLowerCase().includes(y) && data[j].outcomes.toLowerCase().includes(z))
-            pop += "<a target=_blank" + ' href=' + data[j].URL + '>' + data[j].pop +'</a>' + '<br>';
+// function circlesAndTippys() {
+// removeTipCircles();
+// for (i=0; i < allGridsArray.length; i++) {
+//     let y = allGridsArray[i].classList[0];
+//     let z = allGridsArray[i].classList[1];
+//     console.log(allGridsArray[0]);
+//     //this filters the square element array and creates a new variable to calculate the length to use as the radius of the circle. same filter is used in the tippy generator below
+//     let pip = data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z));
+//     allGridsArray[i].innerHTML += '<svg class="circle' + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length * 7 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
+//   //console.log(pip);
+//     //this compares the values in the data to the class list on the square element and if they match it adds the URL and author text to the tippy.
+//     let pop = "";
+//     for(var j = 0; j < data.length; j++){
+//         if(data[j].intervention.toLowerCase().includes(y) && data[j].outcomes.toLowerCase().includes(z))
+//             pop += "<a target=_blank" + ' href=' + data[j].URL + '>' + data[j].pop +'</a>' + '<br>';
 
-            //this just displays author - use this if there no url in the data file
-            // else if(data[j].URL === "" && data[j].intervention === y && data[j].outcome.includes(z))
-            // pop += data[j].pop + '<br>';
-    };
+//             //this just displays author - use this if there no url in the data file
+//             // else if(data[j].URL === "" && data[j].intervention === y && data[j].outcome.includes(z))
+//             // pop += data[j].pop + '<br>';
+//     };
     
 
-    // if(pop.length > 0 && !allGridsArray[i].class.contains('filter'))
-    if(pop.length > 0)
-    tippy("#" + allGridsArray[i].id, {
-    maxWidth: '',
-    content: '<p>' + data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z)).length + '</p>' + pop,
-    allowHTML: true,
-    //theme: 'origTippy',
-    //trigger: 'click',
-    //placement: "right",
-    boundary: 'parent',
-    appendTo: 'parent',
-    interactive: true
-    });
-    pop = '';
-};
+//     // if(pop.length > 0 && !allGridsArray[i].class.contains('filter'))
+//     if(pop.length > 0)
+//     tippy("#" + allGridsArray[i].id, {
+//     maxWidth: '',
+//     content: '<p>' + data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z)).length + '</p>' + pop,
+//     allowHTML: true,
+//     //theme: 'origTippy',
+//     //trigger: 'click',
+//     //placement: "right",
+//     boundary: 'parent',
+//     appendTo: 'parent',
+//     interactive: true
+//     });
+//     pop = '';
+// };
+// }
+
+// Quality of evidence
+// high 	Experimental Designs
+// medium	Quasi-experimental Designs
+// low	Observational – Analytic Designs
+// Level 4	Observational –Descriptive Studies
+// Level 5	Expert Opinion and Bench Research
+
+function circlesAndTippys() {
+  removeTipCircles();
+  
+
+
+
+  
+  for (i=0; i < allGrids.length; i++) {
+      let y = allGrids[i].classList[0];
+      let z = allGrids[i].classList[1];
+  // let gridWidth = allGrids[i].offsetWidth;
+  // let gridHeight = allGrids[i].offsetHeight;
+  let gridWidth = allGrids[i].clientWidth;
+  let gridHeight = allGrids[i].clientHeight;
+      let bubs = d3.select(allGrids[i])
+  //console.log(allGrids[i]);
+      .append("svg")
+      //.attr("width", allGrids[i].parentNode.width)
+      .attr("width", gridWidth)
+      .attr("height", gridHeight);
+
+      // let newElement = document.createElementNS('http://www.w3.org/2000/svg','rect');
+      // newElement.setAttribute('fill','orange');
+      // newElement.setAttribute('width','200');
+      // newElement.setAttribute('height','200');
+      // document.getElementById(allGrids[i]).appendChild(newElement);
+
+
+     // allGrids[i].innerHTML += '<svg id=' + allGrids[i].id +" " + 'class="circle ' + y + " " + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100">';
+
+      for (q=0;q<qualityCategory.length;q++) {
+      //let pip = data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z) && it.quality.includes(qualityCategory[q]));
+      let pip = data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z) && it.quality.includes(qualityCategory[q]));
+      let circleRadius = pip.length;
+      //console.log(pip.length);
+      const circleDiameter = circleRadius * 2;
+      if(pip.length>0) {    
+        //allGridsArray[i].innerHTML += '<svg id=' + qualityCategory[q] + allGrids[i].id +" " + 'class="circle ' + y + " " + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
+        //allGrids[i].innerHTML += '<circle id=' + qualityCategory[q] + allGrids[i].id + 'class="circle ' + y + " " + z + " " + qualityCategory[q] + '" r=' + pip.length * 4 + ' cx=50% cy=50% stroke=black stroke-width=.5/></circle>';
+        //allGrids[i].innerHTML += '<svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle id=' + qualityCategory[q] + allGrids[i].id + ' class="circle"' + y + z + "" + qualityCategory[q] + ' ' + 'r=' + pip.length * 4 + ' cx=50% cy=50% stroke=black stroke-width=.5></circle>';
+       
+        
+        let pips = {};
+         pips = pip[0].key.charAt(0);
+ console.log(pips);
+
+        bubs.append("g")
+        .selectAll("circle")
+        .data(pips)
+        .enter()
+        .append("circle")
+          .attr("cx", (d, i) => circleRadius + 25 + (i * 2 * circleDiameter))
+          .attr("cy", circleRadius + 25 + 5)
+          // .attr("cx", width/2)
+          // .attr("cy", height/2)
+          // .attr("r", 0)
+          // .transition()
+          .attr("r", circleRadius*5)
+          .attr("class","circlegrid nodes " + qualityCategory[q])
+          //.attr("class",q)
+          .attr("id",qualityCategory[q] + allGrids[i].id)
+          //.style("fill", "#69b3a2")
+          //.style("fill-opacity", 0.5)
+          .attr("stroke", "black")
+          .style("stroke-width", .5)
+
+
+
+
+
+console.log(pip);
+          
+//allGridsArray[i].innerHTML += '<svg id=' + qualityCategory[q] + allGrids[i].id +" " + 'class="circle ' + y + " " + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';  
+    //  allGridsArray[i].innerHTML += '<svg class="circle' + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length * 7 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
+    //console.log(pip);
+      //this compares the values in the data to the class list on the square element and if they match it adds the URL and author text to the tippy.
+      let pop = "";
+      for(var j = 0; j < data.length; j++){
+          if(data[j].intervention.toLowerCase().includes(y) && data[j].outcomes.toLowerCase().includes(z) && data[j].quality.includes(qualityCategory[q]))
+              pop += "<a target=_blank" + ' href=' + data[j].URL + '>' + data[j].pop +'</a>' + '<br>';
+              //console.log(pop);
+  
+              //this just displays author - use this if there no url in the data file
+              // else if(data[j].URL === "" && data[j].intervention === y && data[j].outcome.includes(z))
+              // pop += data[j].pop + '<br>';
+      };
+      
+  
+      // if(pop.length > 0 && !allGridsArray[i].class.contains('filter'))
+      if(pop.length > 0)
+      tippy("#" + qualityCategory[q] + allGrids[i].id, {
+      maxWidth: '',
+      content: '<p>' + data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z) && it.quality === qualityCategory[q]).length + '</p>' + pop,
+      allowHTML: true,
+      //theme: 'origTippy',
+      //trigger: 'click',
+      //placement: "right",
+      boundary: 'parent',
+      appendTo: document.body,
+      interactive: true
+      });
+      pop = '';
+      pip = '';
+  };
 }
+}
+
+}
+// moveCircles();
+// function moveCircles(){
+//   let svg = d3.selectAll(".low .medium .high");
+//   console.log(svg);
+//   //width = svg.
+//   //console.log(svg)
+//   //console.log(allGrids[i]);
+//       // .append("svg")
+//       // //.attr("width", allGrids[i].parentNode.width)
+//       // .attr("width", width)
+//       // .attr("height", height);
+
+//       var simulation = d3.forceSimulation()
+//     //.force("link", d3.forceLink().id(function(d) { return d.id; }))
+    
+//     .force("center", d3.forceCenter(1, 1))
+//     .force("x", d3.forceX().strength(0.5).x( function(d){ return x(d.group) } ))
+//     .force("y", d3.forceY().strength(0.1).y( 20 ))
+//     //.force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
+//     .force("charge", d3.forceManyBody().strength(1)) // Nodes are attracted one each other of value is > 0
+//     .force("collide", d3.forceCollide().strength(.1).radius(32).iterations(1)) // Force that avoids circle overlapping
+
+
+//     simulation
+//       .nodes(svg.nodes)
+//       //.on("tick", ticked);
+//       .on("tick", function(d){
+//         svg
+//             .attr("cx", function(d){ return d.x; })
+//             .attr("cy", function(d){ return d.y; })
+//       });
+
+//       // function ticked() {
+//       //   svg
+//       //       .attr("cx", function(d) { return d.x; })
+//       //       .attr("cy", function(d) { return d.y; });
+//       // }
+
+// }
 // set variables for grids in each outcome area
 let settingGrids = document.querySelectorAll(".setting,.early,.primary,.secondary,.special");
 let teacherGrids = document.querySelectorAll(".attitude,.pedagogical,.managing");
@@ -983,6 +1136,7 @@ for (var x = 0; x < studentGrids.length; x++) {
 }
 // function to show grids with teacher class and hide others
 function showTeacher() {
+    
     document.getElementById("grid").style.gridTemplateColumns = "repeat(4, 25vmin)";
     document.getElementById("teacheroutcomes").style.gridColumn = "2/5";
     Array.from(document.querySelectorAll(".teacher"))
@@ -992,10 +1146,11 @@ function showTeacher() {
     .forEach(function(val) {
         val.style.display = 'none';
     });
-
+    //circlesAndTippys();
 }
 // function to show grids with student class and hide others
 function showStudent() {
+  
     document.getElementById("grid").style.gridTemplateColumns = "repeat(3, 33vmin)";
     document.getElementById("studentoutcomes").style.gridColumn = "2/4";
     Array.from(document.querySelectorAll(".student"))
@@ -1006,9 +1161,11 @@ function showStudent() {
     .forEach(function(val) {
         val.style.display = 'none';
     });
+    //circlesAndTippys();
 }
 // function to show grids with setting class and hide others
 function showSetting() {
+  
     document.getElementById("grid").style.gridTemplateColumns = "repeat(5, 20vmin)";
     document.getElementById("setting").style.gridColumn = "2/6";
     Array.from(document.querySelectorAll(".setting"))
@@ -1019,6 +1176,7 @@ function showSetting() {
     .forEach(function(val) {
         val.style.display = 'none';
     });
+    //circlesAndTippys();
 }
 
 // this is the d3 map https://gist.run/?id=3ccd770923a61f26f55156657e2f51e8 https://bl.ocks.org/d3indepth/raw/3ccd770923a61f26f55156657e2f51e8/
@@ -1061,19 +1219,19 @@ function update(geojson) {
     .selectAll('path')
     .data(geojson.features);
 
-u.enter()
-    .append('path')
-    .attr("id",  d => d.properties.name_long.toLowerCase().replace(/\s+/g, ''))
-    .attr("class", d => d.properties.name)
-    .attr("class", d => d.properties.adm0_a3)
-    .attr("name", d => d.properties.name_long)
-    //.attr("alpha", dfatCountries => dfatCountries.name)
-    // .attr("text-anchor", "middle")
-    // .attr("fill", "black")
-    .classed(" land", true)
-    .attr('d', geoGenerator)
-    .on('mouseover', handleMouseover)
-    .on('mouseover', );
+  u.enter()
+      .append('path')
+      .attr("id",  d => d.properties.name_long.toLowerCase().replace(/\s+/g, ''))
+      .attr("class", d => d.properties.name)
+      .attr("class", d => d.properties.adm0_a3)
+      .attr("name", d => d.properties.name_long)
+      //.attr("alpha", dfatCountries => dfatCountries.name)
+      // .attr("text-anchor", "middle")
+      // .attr("fill", "black")
+      .classed(" land", true)
+      .attr('d', geoGenerator)
+      .on('mouseover', handleMouseover)
+      .on('mouseover', );
 }    
 
 //add colours to land paths and tippy for countries with studies
@@ -1098,7 +1256,7 @@ function draw() {
     let pop = "";
     for(var j = 0; j < data.length; j++){
         if(data[j].country.toLowerCase().replace(/\s+/g, '').includes(y) && (cpathArray[i].id.includes(y))) {
-            pop += '</br><b>' + data[j].title + '</b>' + ' ' + data[j].authors + ' (' + data[j].year + ")" + '<br>' + "Key findings: " + data[j].findings + '<br>' + "<a target=_blank" + ' href=' + data[j].URL + '>' + data[j].URL +'</a></br>';
+            pop += '</br><b>' + data[j].title + '</b>' + ' ' + data[j].authors + ' (' + data[j].year + ")" + '<br>' + '<strong>' + "Key findings: " + '</strong>' + data[j].findings + '<br>' + "<a target=_blank" + ' href=' + data[j].URL + '>' + data[j].URL +'</a></br>';
             cpathArray[i].classList.add("study");
         }
 
@@ -1202,7 +1360,7 @@ legend.selectAll("mylabels")
     .style("alignment-baseline", "middle")
 
 // hovers for outcomes descriptions
-tippy("#teacherattitudes", {
+tippy("#teacherattitude", {
   maxWidth: 500,
   content: "Relates to teachers’ attitudes (acceptance, confidence, and self- efficacy) towards children with disabilities and knowledge about and understanding of inclusive practices.",
   allowHTML: true,
@@ -1244,6 +1402,7 @@ var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btnCountry");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
+    //circlesAndTippys();
     const all = document.getElementById('myBtnContainer');
     const current = all.querySelectorAll(".active");
     current[0].className = current[0].className.replace(" active", "");
@@ -1271,7 +1430,7 @@ function removeTipCircles (){
       }
     }
   //https://github.com/atomiks/tippyjs/issues/473
-  [...document.querySelectorAll('.square')].forEach(node => {
+  [...document.querySelectorAll(".square")].forEach(node => {
     if (node._tippy) {
       node._tippy.destroy();
     }
@@ -1283,36 +1442,92 @@ removeTipCircles();
 
 for (i=0; i < allGridsArray.length; i++) {
   let countryData = data.filter(it => it.country.toLowerCase().includes(val));
-  console.log(countryData);
+  //console.log(countryData);
   
   let y = allGridsArray[i].classList[0];
   let z = allGridsArray[i].classList[1];
-  //this filters the square element array and creates a new variable to calculate the length to use as the radius of the circle. same filter is used in the tippy generator below
-  let pip = countryData.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z));
-  allGridsArray[i].innerHTML += '<svg class="circle' + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length * 7 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
-console.log(pip);
+  // let gridWidth = allGrids[i].offsetWidth;
+  // let gridHeight = allGrids[i].offsetHeight;
+  let gridWidth = allGrids[i].clientWidth;
+  let gridHeight = allGrids[i].clientHeight;
+  let bubs = d3.select(allGrids[i])
+//console.log(allGrids[i]);
+  .append("svg")
+  //.attr("width", allGrids[i].parentNode.width)
+  .attr("width", gridWidth)
+  .attr("height", gridHeight);
+
+  
+  for (q=0;q<qualityCategory.length;q++) {
+
+ //this filters the square element array and creates a new variable to calculate the length to use as the radius of the circle. same filter is used in the tippy generator below
+ let pip = countryData.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z) && it.quality === qualityCategory[q]);
+ //allGridsArray[i].innerHTML += '<svg class="circle' + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length * 7 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
+let circleRadius = pip.length;
+  //console.log(pip.length);
+  const circleDiameter = circleRadius * 2;
+
+  if(pip.length>0) {    
+    //allGridsArray[i].innerHTML += '<svg id=' + qualityCategory[q] + allGrids[i].id +" " + 'class="circle ' + y + " " + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
+    //allGrids[i].innerHTML += '<circle id=' + qualityCategory[q] + allGrids[i].id + 'class="circle ' + y + " " + z + " " + qualityCategory[q] + '" r=' + pip.length * 4 + ' cx=50% cy=50% stroke=black stroke-width=.5/></circle>';
+    //allGrids[i].innerHTML += '<svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle id=' + qualityCategory[q] + allGrids[i].id + ' class="circle"' + y + z + "" + qualityCategory[q] + ' ' + 'r=' + pip.length * 4 + ' cx=50% cy=50% stroke=black stroke-width=.5></circle>';
+   
+    
+    let pips = {};
+     pips = pip[0].key.charAt(0);
+console.log(pips);
+
+    bubs.append("g")
+    .selectAll("circle")
+    .data(pips)
+    .enter()
+    .append("circle")
+      .attr("cx", (d, i) => circleRadius + 25 + (i * 2 * circleDiameter))
+      .attr("cy", circleRadius + 25 + 5)
+      // .attr("cx", width/2)
+      // .attr("cy", height/2)
+      // .attr("r", 0)
+      // .transition()
+      .attr("r", circleRadius*5)
+      .attr("class","circlegrid nodes " + qualityCategory[q])
+      //.attr("class",q)
+      .attr("id",qualityCategory[q] + allGrids[i].id)
+      //.style("fill", "#69b3a2")
+      //.style("fill-opacity", 0.5)
+      .attr("stroke", "black")
+      .style("stroke-width", .5)
+
+
+ 
+
+
+
+  console.log(pip);
   //this compares the values in the data to the class list on the square element and if they match it adds the URL and author text to the tippy.
   let pop = "";
   for(var j = 0; j < countryData.length; j++){
-      if(countryData[j].intervention.toLowerCase().includes(y) && countryData[j].outcomes.toLowerCase().includes(z))
+      if(countryData[j].intervention.toLowerCase().includes(y) && countryData[j].outcomes.toLowerCase().includes(z) && countryData[j].quality == qualityCategory[q])
           pop += "<a target=_blank" + ' href=' + countryData[j].URL + '>' + countryData[j].pop +'</a>' + '<br>';
   };
   if(pop.length > 0)
-  tippy("#" + allGridsArray[i].id, {
+  tippy("#" + qualityCategory[q] + allGrids[i].id, {
   maxWidth: '',
-  content: '<p>' + countryData.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z)).length + '</p>' + pop,
+  content: '<p>' + countryData.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z) && it.quality == qualityCategory[q]).length + '</p>' + pop,
   allowHTML: true,
   boundary: 'parent',
-  appendTo: 'parent',
+  appendTo: document.body,
   interactive: true
   });
   pop = '';
 };
-countryData = '';
+
+}
+}countryData = '';
 }
 //add number of studies to country button text
 document.getElementById("btnChina").textContent = "China (" + data.filter(it => it.country.toLowerCase().includes('china')).length + ")";
 document.getElementById("btnIndia").textContent = "India (" + data.filter(it => it.country.toLowerCase().includes('india')).length + ")";
+document.getElementById("btnMalaysia").textContent = "Malaysia (" + data.filter(it => it.country.toLowerCase().includes('malaysia')).length + ")";
 document.getElementById("btnPakistan").textContent = "Pakistan (" + data.filter(it => it.country.toLowerCase().includes('pakistan')).length + ")";
 document.getElementById("btnSriLanka").textContent = "Sri Lanka (" + data.filter(it => it.country.toLowerCase().includes('sri lanka')).length + ")";
 document.getElementById("btnThailand").textContent = "Thailand (" + data.filter(it => it.country.toLowerCase().includes('thailand')).length + ")";
