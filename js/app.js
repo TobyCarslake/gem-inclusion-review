@@ -1136,7 +1136,7 @@ for (var x = 0; x < studentGrids.length; x++) {
 }
 // function to show grids with teacher class and hide others
 function showTeacher() {
-    
+  //circlesAndTippys();
     document.getElementById("grid").style.gridTemplateColumns = "repeat(4, 25vmin)";
     document.getElementById("teacheroutcomes").style.gridColumn = "2/5";
     Array.from(document.querySelectorAll(".teacher"))
@@ -1146,11 +1146,11 @@ function showTeacher() {
     .forEach(function(val) {
         val.style.display = 'none';
     });
-    //circlesAndTippys();
+    circlesAndTippys();
 }
 // function to show grids with student class and hide others
 function showStudent() {
-  
+  circlesAndTippys();
     document.getElementById("grid").style.gridTemplateColumns = "repeat(3, 33vmin)";
     document.getElementById("studentoutcomes").style.gridColumn = "2/4";
     Array.from(document.querySelectorAll(".student"))
@@ -1161,7 +1161,7 @@ function showStudent() {
     .forEach(function(val) {
         val.style.display = 'none';
     });
-    //circlesAndTippys();
+    circlesAndTippys();
 }
 // function to show grids with setting class and hide others
 function showSetting() {
@@ -1176,7 +1176,7 @@ function showSetting() {
     .forEach(function(val) {
         val.style.display = 'none';
     });
-    //circlesAndTippys();
+    circlesAndTippys();
 }
 
 // this is the d3 map https://gist.run/?id=3ccd770923a61f26f55156657e2f51e8 https://bl.ocks.org/d3indepth/raw/3ccd770923a61f26f55156657e2f51e8/
@@ -1400,25 +1400,36 @@ tippy("#interventions", {
 // Add active class to the current country button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
 var btns = btnContainer.getElementsByClassName("btnCountry");
+var countryButton = document.getElementById("countryButton");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
     //circlesAndTippys();
-    const all = document.getElementById('myBtnContainer');
-    const current = all.querySelectorAll(".active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+    // const all = document.getElementById('myBtnContainer');
+    // const current = all.querySelectorAll(".active");
+    // current[0].className = current[0].className.replace(" active", "");
+    // this.className += " active";
+    if(this.innerText === "Show all") {
+      countryButton.innerText = "All countries"
+    }
+    else {
+    countryButton.innerText = this.innerText;
+    }
     //this.textContent = val + " (" + data.filter(it => it.country.toLowerCase().includes(val)).length + ")";
   });
 }
 // Add active class to the current outcomes button (highlight it)
 var outcomebtnsContainer = document.getElementById("tog");
 var outcomebtns = outcomebtnsContainer.getElementsByClassName("btnOutcomes");
+var outcomesButton = document.getElementById("outcomesButton");
+console.log(outcomebtns);
 for (var i = 0; i < outcomebtns.length; i++) {
   outcomebtns[i].addEventListener("click", function(){
-    const all = document.getElementById('tog');
-    const current = all.querySelectorAll(".active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
+    //console.log(outcomebtns[i]);
+    // const all = document.getElementById('tog');
+    // const current = all.querySelectorAll(".active");
+    // current[0].className = current[0].className.replace(" active", "");
+    // this.className += " active";
+    outcomesButton.innerText = this.innerText;
   });
 }
 function removeTipCircles (){
@@ -1532,3 +1543,29 @@ document.getElementById("btnPakistan").textContent = "Pakistan (" + data.filter(
 document.getElementById("btnSriLanka").textContent = "Sri Lanka (" + data.filter(it => it.country.toLowerCase().includes('sri lanka')).length + ")";
 document.getElementById("btnThailand").textContent = "Thailand (" + data.filter(it => it.country.toLowerCase().includes('thailand')).length + ")";
 document.getElementById("btnVietnam").textContent = "Vietnam (" + data.filter(it => it.country.toLowerCase().includes('vietnam')).length + ")";
+
+
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function countryDropDown() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+function outcomesDropDown() {
+  document.getElementById("myDropdown2").classList.toggle("show");
+}
+
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+window.onresize = circlesAndTippys();
