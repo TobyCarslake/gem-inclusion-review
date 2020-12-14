@@ -63,7 +63,7 @@ a:hover {
     color: lightgray;
 }
 .tog {
-    padding: 4px;
+    /* padding: 4px; */
 }
 #chart {
     width: 100%;
@@ -92,6 +92,12 @@ footer.bg-dark {
     margin-right: 10px!important;
 }
 
+@media only screen and (max-width: 1199px) {
+    .headRow {
+        font-size: .8em;
+        /* line-height: .7rem; */
+    }
+}
 @media only screen and (max-width: 1025px) {
     body {
         width: auto;
@@ -102,7 +108,7 @@ footer.bg-dark {
     }
     .headRow {
         font-size: .8em;
-        /* line-height: .7rem; */
+        line-height: .7rem;
     }
     div.teacher {
         display: none;
@@ -111,8 +117,8 @@ footer.bg-dark {
         display: none;
     }
     .grid {
-        grid-template-columns: repeat(5, 20vmin);
-        /* grid-template-columns: repeat(5, minmax(50px, 100px)); */
+        grid-template-columns: repeat(5, 18vmin);
+        /* grid-template-rows: repeat(6, 40px); */
         /* max-width: 100%;
         width: auto;
         margin-left: auto;
@@ -120,30 +126,30 @@ footer.bg-dark {
     }
     .grid > svg {
         width: 100%;
-        height: 100%;
+        /* height: 100%; */
     }
-    .low {
-        /* fill: #391463; */
+    /* .low {
+        
         cx: 65%;
         cy: 65%;
-        /* cursor: pointer; */
+        
     }
     .medium {
         fill: #2d936c;
         cx: 50%;
         cy: 50%;
-       /* cursor: pointer; */
+       
     }
     .high {
         fill: #1E88E5;
         cx: 25%;
         cy: 25%;
-       /* cursor: pointer; */
-    }
+       
+    } */
     #chart {
-        /* height: 350px; */
+        height: 350px;
     }
-    #grid, .tog {
+    #grid {
         width: auto;
         margin-left: auto;
         margin-right: auto;
@@ -156,15 +162,21 @@ footer.bg-dark {
         border-style: solid;
         border-width: .5px;
     } */
-
+    .btn {
+        font-size: .7em;
+        border-radius: 0;
+    }
 
 }
 @media only screen and (min-width: 1025px) {
-    #tog {
+    #myBtnContainer2 {
         display: none;
     }
 }
-
+.btn {
+    /* font-size: .7em; */
+    border-radius: 0;
+}
 /*  style for map*/
 #content .info {
     height: 20px;
@@ -180,15 +192,18 @@ stroke-width: 4;
     height: 100%;
 }
 #content .land {
-    fill: #efefef;
+    /* fill: #efefef; */
+    fill: #808080;
     stroke: black;
     stroke-width: .003;
 }
 #content .notDev {
-    fill: #1d8ba7;
+    /* fill: #1d8ba7; */
+    /* fill: #efefef; */
+    fill: #808080;
 }
 #content .dfatDev {
-    fill: #859cd3;
+    fill: #e9d9f3;
     
 }
 #content .study {
@@ -266,16 +281,16 @@ a.cntInfo:hover {
     text-align: center;
     margin: 2px;
     display: none; /* Hidden by default */
-  }
-  
-  /* The "show" class is added to the filtered elements */
-  .hide {
-      display: none;
-  }
+}
 
-  .show {
-    display: block;
-  }
+/* The "show" class is added to the filtered elements */
+.hide {
+    display: none;
+}
+
+.show {
+display: block;
+}
 .low {
     /* fill: #391463; */
     cx: 65%;
@@ -358,4 +373,8 @@ a.cntInfo:hover {
     border-color: #7E277E; */
     background-color: white;
     
+}
+svg:not(:root) {
+    width:100%;
+    height: 100%;
 }

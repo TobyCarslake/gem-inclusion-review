@@ -926,6 +926,52 @@ for (x of interventions) {
 const qualityCategory = ["low","medium","high"];
 //execute tippys and circles for grid
 circlesAndTippys();
+//this uses the array of elements with a class of square created above and thier first (intervention) and second (outcome) classes as values to use in the filter search
+// function circlesAndTippys() {
+// removeTipCircles();
+// for (i=0; i < allGridsArray.length; i++) {
+//     let y = allGridsArray[i].classList[0];
+//     let z = allGridsArray[i].classList[1];
+//     console.log(allGridsArray[0]);
+//     //this filters the square element array and creates a new variable to calculate the length to use as the radius of the circle. same filter is used in the tippy generator below
+//     let pip = data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z));
+//     allGridsArray[i].innerHTML += '<svg class="circle' + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length * 7 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
+//   //console.log(pip);
+//     //this compares the values in the data to the class list on the square element and if they match it adds the URL and author text to the tippy.
+//     let pop = "";
+//     for(var j = 0; j < data.length; j++){
+//         if(data[j].intervention.toLowerCase().includes(y) && data[j].outcomes.toLowerCase().includes(z))
+//             pop += "<a target=_blank" + ' href=' + data[j].URL + '>' + data[j].pop +'</a>' + '<br>';
+
+//             //this just displays author - use this if there no url in the data file
+//             // else if(data[j].URL === "" && data[j].intervention === y && data[j].outcome.includes(z))
+//             // pop += data[j].pop + '<br>';
+//     };
+    
+
+//     // if(pop.length > 0 && !allGridsArray[i].class.contains('filter'))
+//     if(pop.length > 0)
+//     tippy("#" + allGridsArray[i].id, {
+//     maxWidth: '',
+//     content: '<p>' + data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z)).length + '</p>' + pop,
+//     allowHTML: true,
+//     //theme: 'origTippy',
+//     //trigger: 'click',
+//     //placement: "right",
+//     boundary: 'parent',
+//     appendTo: 'parent',
+//     interactive: true
+//     });
+//     pop = '';
+// };
+// }
+
+// Quality of evidence
+// high 	Experimental Designs
+// medium	Quasi-experimental Designs
+// low	Observational – Analytic Designs
+// Level 4	Observational –Descriptive Studies
+// Level 5	Expert Opinion and Bench Research
 
 //draws grid circles and tippys for each level of quality
 function circlesAndTippys() {
@@ -935,22 +981,42 @@ function circlesAndTippys() {
   for (i=0; i < allGrids.length; i++) {
       let y = allGrids[i].classList[0];
       let z = allGrids[i].classList[1];
-      let gridWidth = allGrids[i].clientWidth;
-      let gridHeight = allGrids[i].clientHeight;
+  // let gridWidth = allGrids[i].offsetWidth;
+  // let gridHeight = allGrids[i].offsetHeight;
+  let gridWidth = allGrids[i].clientWidth;
+  let gridHeight = allGrids[i].clientHeight;
       let bubs = d3.select(allGrids[i])
+  //console.log(allGrids[i]);
       .append("svg")
+      //.attr("width", allGrids[i].parentNode.width)
       .attr("width", gridWidth)
       .attr("height", gridHeight);
 
+      // let newElement = document.createElementNS('http://www.w3.org/2000/svg','rect');
+      // newElement.setAttribute('fill','orange');
+      // newElement.setAttribute('width','200');
+      // newElement.setAttribute('height','200');
+      // document.getElementById(allGrids[i]).appendChild(newElement);
+
+
+     // allGrids[i].innerHTML += '<svg id=' + allGrids[i].id +" " + 'class="circle ' + y + " " + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100">';
+
       for (q=0;q<qualityCategory.length;q++) {
+      //let pip = data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z) && it.quality.includes(qualityCategory[q]));
       let pip = data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z) && it.quality.includes(qualityCategory[q]));
       let circleRadius = pip.length;
-
-      console.log(pip);
+      //console.log(pip.length);
       const circleDiameter = circleRadius * 2;
       if(pip.length>0) {    
+        //allGridsArray[i].innerHTML += '<svg id=' + qualityCategory[q] + allGrids[i].id +" " + 'class="circle ' + y + " " + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
+        //allGrids[i].innerHTML += '<circle id=' + qualityCategory[q] + allGrids[i].id + 'class="circle ' + y + " " + z + " " + qualityCategory[q] + '" r=' + pip.length * 4 + ' cx=50% cy=50% stroke=black stroke-width=.5/></circle>';
+        //allGrids[i].innerHTML += '<svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle id=' + qualityCategory[q] + allGrids[i].id + ' class="circle"' + y + z + "" + qualityCategory[q] + ' ' + 'r=' + pip.length * 4 + ' cx=50% cy=50% stroke=black stroke-width=.5></circle>';
+       
+        
         let pips = {};
-        pips = pip[0].key.charAt(0);
+         pips = pip[0].key.charAt(0);
+ //console.log(pips);
+
         bubs.append("g")
         .selectAll("circle")
         .data(pips)
@@ -958,35 +1024,100 @@ function circlesAndTippys() {
         .append("circle")
           .attr("cx", (d, i) => circleRadius + 25 + (i * 2 * circleDiameter))
           .attr("cy", circleRadius + 25 + 5)
+          // .attr("cx", width/2)
+          // .attr("cy", height/2)
+          // .attr("r", 0)
+          // .transition()
           .attr("r", circleRadius*5)
-          .attr("class","circlegrid nodes " + qualityCategory[q] + " " + allGrids[i].classList[3])
+          .attr("class","circlegrid nodes " + qualityCategory[q])
+          //.attr("class",q)
           .attr("id",qualityCategory[q] + allGrids[i].id)
+          //.style("fill", "#69b3a2")
+          //.style("fill-opacity", 0.5)
           .attr("stroke", "black")
           .style("stroke-width", .5)
 
+
+
+
+
+//console.log(pip);
+          
+//allGridsArray[i].innerHTML += '<svg id=' + qualityCategory[q] + allGrids[i].id +" " + 'class="circle ' + y + " " + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';  
+    //  allGridsArray[i].innerHTML += '<svg class="circle' + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length * 7 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
+    //console.log(pip);
       //this compares the values in the data to the class list on the square element and if they match it adds the URL and author text to the tippy.
       let pop = "";
       for(var j = 0; j < data.length; j++){
           if(data[j].intervention.toLowerCase().includes(y) && data[j].outcomes.toLowerCase().includes(z) && data[j].quality.includes(qualityCategory[q]))
               pop += "<a target=_blank" + ' href=' + data[j].URL + '>' + data[j].pop +'</a>' + '<br>';
-      };  
+              //console.log(pop);
+  
+              //this just displays author - use this if there no url in the data file
+              // else if(data[j].URL === "" && data[j].intervention === y && data[j].outcome.includes(z))
+              // pop += data[j].pop + '<br>';
+      };
+      
+  
       // if(pop.length > 0 && !allGridsArray[i].class.contains('filter'))
       if(pop.length > 0)
       tippy("#" + qualityCategory[q] + allGrids[i].id, {
       maxWidth: '',
       content: '<p>' + data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z) && it.quality === qualityCategory[q]).length + '</p>' + pop,
       allowHTML: true,
+      //theme: 'origTippy',
+      //trigger: 'click',
+      //placement: "right",
       boundary: 'parent',
       appendTo: document.body,
       interactive: true
       });
       pop = '';
       pip = '';
-    };
-    }
-  }
+  };
+}
 }
 
+}
+// moveCircles();
+// function moveCircles(){
+//   let svg = d3.selectAll(".low .medium .high");
+//   console.log(svg);
+//   //width = svg.
+//   //console.log(svg)
+//   //console.log(allGrids[i]);
+//       // .append("svg")
+//       // //.attr("width", allGrids[i].parentNode.width)
+//       // .attr("width", width)
+//       // .attr("height", height);
+
+//       var simulation = d3.forceSimulation()
+//     //.force("link", d3.forceLink().id(function(d) { return d.id; }))
+    
+//     .force("center", d3.forceCenter(1, 1))
+//     .force("x", d3.forceX().strength(0.5).x( function(d){ return x(d.group) } ))
+//     .force("y", d3.forceY().strength(0.1).y( 20 ))
+//     //.force("center", d3.forceCenter().x(width / 2).y(height / 2)) // Attraction to the center of the svg area
+//     .force("charge", d3.forceManyBody().strength(1)) // Nodes are attracted one each other of value is > 0
+//     .force("collide", d3.forceCollide().strength(.1).radius(32).iterations(1)) // Force that avoids circle overlapping
+
+
+//     simulation
+//       .nodes(svg.nodes)
+//       //.on("tick", ticked);
+//       .on("tick", function(d){
+//         svg
+//             .attr("cx", function(d){ return d.x; })
+//             .attr("cy", function(d){ return d.y; })
+//       });
+
+//       // function ticked() {
+//       //   svg
+//       //       .attr("cx", function(d) { return d.x; })
+//       //       .attr("cy", function(d) { return d.y; });
+//       // }
+
+// }
 // set variables for grids in each outcome area
 let settingGrids = document.querySelectorAll(".setting,.early,.primary,.secondary,.special");
 let teacherGrids = document.querySelectorAll(".attitude,.pedagogical,.managing");
@@ -1001,45 +1132,24 @@ for (var x = 0; x < teacherGrids.length; x++) {
 for (var x = 0; x < studentGrids.length; x++) {
     studentGrids[x].className += ' student ';
 }
-
-let cntButShort = document.querySelector("#countryButton").innerText;
-console.log(cntButShort);
 // function to show grids with teacher class and hide others
 function showTeacher() {
-  // let gridWidth = allGrids[i].clientWidth;
-  // let gridHeight = allGrids[i].clientHeight;
-  // if (cntButShort = "All countries") {
-  //   circlesAndTippys();
-  // }
+  //circlesAndTippys();
     document.getElementById("grid").style.gridTemplateColumns = "repeat(4, 23vmin)";
     document.getElementById("teacheroutcomes").style.gridColumn = "2/5";
     Array.from(document.querySelectorAll(".teacher"))
     .forEach(function(val) {
         val.style.display = 'grid';
-    });
-    // Array.from(document.querySelectorAll("svg"))
-    // .forEach(function(val) {
-    //     val.height = parentElement.clientWidth;
-    //     val.width = parentElement.clientWidth;
-    // });
-    Array.from(document.querySelectorAll(".setting,.student"))
+    });Array.from(document.querySelectorAll(".setting,.student"))
     .forEach(function(val) {
         val.style.display = 'none';
     });
-    //countryFilter(cntButShort);
-  //console.log(cntButShort);
-  
-  //countryFilter(cntButShort);
-  //circlesAndTippys();
-  
+    countryFilter(cntButShort);
+  console.log(cntButShort);
 }
-
-
-
 // function to show grids with student class and hide others
 function showStudent() {
- // circlesAndTippys();
-  //countryFilter(cntButShort);
+  //circlesAndTippys();
     document.getElementById("grid").style.gridTemplateColumns = "repeat(3, 30vmin)";
     document.getElementById("studentoutcomes").style.gridColumn = "2/4";
     Array.from(document.querySelectorAll(".student"))
@@ -1050,15 +1160,12 @@ function showStudent() {
     .forEach(function(val) {
         val.style.display = 'none';
     });
-    
-    
-   // countryFilter(cntButShort);
-   // circlesAndTippys();
+    countryFilter(cntButShort);
   console.log(cntButShort);
 }
 // function to show grids with setting class and hide others
 function showSetting() {
-  //circlesAndTippys();
+  
     document.getElementById("grid").style.gridTemplateColumns = "repeat(5, 18vmin)";
     document.getElementById("setting").style.gridColumn = "2/6";
     Array.from(document.querySelectorAll(".setting"))
@@ -1069,12 +1176,18 @@ function showSetting() {
     .forEach(function(val) {
         val.style.display = 'none';
     });
-   // countryFilter(cntButShort);
+    countryFilter(cntButShort);
   console.log(cntButShort);
-  //circlesAndTippys();
 }
 
 // this is the d3 map https://gist.run/?id=3ccd770923a61f26f55156657e2f51e8 https://bl.ocks.org/d3indepth/raw/3ccd770923a61f26f55156657e2f51e8/
+// this is for globe display
+// var projection = d3.geoOrthographic()
+// .scale(280)
+//   .translate([300, 310])
+//   .center([0, 5])
+//   .rotate([-100,0,0]);
+
 //sets width and height based on the container that the chart is in
 let width = d3.select("#chart").node().getBoundingClientRect().width;
 let height = d3.select("#chart").node().getBoundingClientRect().height;
@@ -1314,20 +1427,18 @@ for (i = 0; i < btns.length; i++) {
     // const current = all.querySelectorAll(".active");
     // current[0].className = current[0].className.replace(" active", "");
     // this.className += " active";
-    // if(this.innerText === "Show all") {
-    //   countryButton.innerText = "All countries"
-    //   console.log("country button is referenced");
-    //   circlesAndTippys();
-    //   //countryFilter(cntButShort);
-    // }
-    //else {
+    if(this.innerText === "Show all") {
+      countryButton.innerText = "All countries"
+      circlesAndTippys();
+    }
+    else {
     countryButton.innerText = this.innerText;
     //console.log(countrySelected);
     //console.log(countryButton.innerText);
     //countrySelected = "";
     // countrySelected.pop();
     // countrySelected.push(this.innerText); 
-    //}
+    }
     //this.textContent = val + " (" + data.filter(it => it.country.toLowerCase().includes(val)).length + ")";
   });
 }
@@ -1369,8 +1480,7 @@ function removeTipCircles (){
     }
   });
 }
-
-
+let cntButShort;
 
 // draws circles and tippys based on the selected country from the country dropdown
 function countryFilter(val) {
@@ -1429,7 +1539,7 @@ let circleRadius = pip.length;
       // .attr("r", 0)
       // .transition()
       .attr("r", circleRadius*5)
-      .attr("class","circlegrid nodes " + qualityCategory[q] + " " + allGrids[i].classList[3])
+      .attr("class","circlegrid nodes " + qualityCategory[q])
       //.attr("class",q)
       .attr("id",qualityCategory[q] + allGrids[i].id)
       //.style("fill", "#69b3a2")
@@ -1473,10 +1583,6 @@ document.getElementById("btnVietnam").textContent = "Vietnam (" + data.filter(it
 toggle between hiding and showing the dropdown content */
 function countryDropDown() {
   document.getElementById("myDropdown").classList.toggle("show");
-  //circlesAndTippys();
-}
-function showAll() {
-  circlesAndTippys();
 }
 
 console.log(cntButShort);
@@ -1501,8 +1607,7 @@ window.onclick = function(event) {
     }
   }
 }
-// window.onresize = circlesAndTippys();
-window.onload = function() {
-  circlesAndTippys();
-}
-
+window.onresize = circlesAndTippys();
+// window.onload = function() {
+//   circlesAndTippys();
+//}
