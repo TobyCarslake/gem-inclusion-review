@@ -941,8 +941,6 @@ function circlesAndTippys() {
       for (q=0;q<qualityCategory.length;q++) {
       let pip = data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z) && it.quality.includes(qualityCategory[q]));
       let circleRadius = pip.length;
-
-      console.log(pip);
       const circleDiameter = circleRadius * 2;
       if(pip.length>0) {           
         let pips = {};
@@ -952,8 +950,6 @@ function circlesAndTippys() {
         .data(pips)
         .enter()
         .append("circle")
-          //.attr("cx", (d, i) => circleRadius + 25 + (i * 2 * circleDiameter))
-          //.attr("cy", circleRadius + 25 + 5)
           .attr("r", circleRadius*5)
           .attr("class","circlegrid nodes " + qualityCategory[q] + " " + allGrids[i].classList[3])
           .attr("id",qualityCategory[q] + allGrids[i].id)
@@ -1004,7 +1000,6 @@ for (var x = 0; x < studentGrids.length; x++) {
 }
 //variable to track dropdown filter values shown on btn
 let cntButShort = document.querySelector("#countryButton").innerText;
-console.log(cntButShort);
 // function to show grids with teacher class and hide others
 function showTeacher() {
     document.getElementById("grid").style.gridTemplateColumns = "repeat(4, 23vmin)";
@@ -1274,33 +1269,13 @@ const countryButton = document.getElementById("countryButton");
 let countrySelected = [];
 for (i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
-    //circlesAndTippys();
-    // const all = document.getElementById('myBtnContainer');
-    // const current = all.querySelectorAll(".active");
-    // current[0].className = current[0].className.replace(" active", "");
-    // this.className += " active";
-    // if(this.innerText === "Show all") {
-    //   countryButton.innerText = "All countries"
-    //   console.log("country button is referenced");
-    //   circlesAndTippys();
-    //   //countryFilter(cntButShort);
-    // }
-    //else {
-    countryButton.innerText = this.innerText;
-    //console.log(countrySelected);
-    //console.log(countryButton.innerText);
-    //countrySelected = "";
-    // countrySelected.pop();
-    // countrySelected.push(this.innerText); 
-    //}
-    //this.textContent = val + " (" + data.filter(it => it.country.toLowerCase().includes(val)).length + ")";
+        countryButton.innerText = this.innerText;
   });
 }
 // Add active class to the current outcomes button (highlight it) and put the selection text on the btn
 const outcomebtnsContainer = document.getElementById("tog");
 const outcomebtns = outcomebtnsContainer.getElementsByClassName("btnOutcomes");
 const outcomesButton = document.getElementById("outcomesButton");
-console.log(outcomebtns);
 for (i = 0; i < outcomebtns.length; i++) {
   outcomebtns[i].addEventListener("click", function(){
     outcomesButton.innerText = this.innerText;
@@ -1326,10 +1301,7 @@ function removeTipCircles (){
 // draws circles and tippys based on the selected country from the country dropdown
 function countryFilter(val) {
   cntButShort = val;
-
   removeTipCircles();
-
-console.log(cntButShort);
 //checks each grid square against the clicked country and filters the studies
 for (i=0; i < allGridsArray.length; i++) {
   let countryData = data.filter(it => it.country.toLowerCase().includes(val));
@@ -1414,7 +1386,6 @@ window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
     var dropdowns = document.getElementsByClassName("dropdown-content");
     var i;
-    console.log(dropdowns);
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
       if (openDropdown.classList.contains('show')) {
