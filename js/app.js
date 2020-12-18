@@ -1,5 +1,3 @@
-
-
 const data = [
   {
     "no": 1,
@@ -871,9 +869,6 @@ const dfatCountries  = [
     "long": -177.156097
   }
 ]
-
-
-
 // array values are used to populate grid cells by searching data array with these values.
 const outcomes = ["early","primary","secondary","special","attitude","pedagogical","managing","learning","behaviour"];
 
@@ -905,7 +900,7 @@ function makeGrid() {
     };
 };
 // dimensions of grid including the html hard coded first headRow
-makeGrid(6, 10);
+makeGrid(7, 10);
 
 //this selects all square elements and then creates an array
 let allGrids = document.querySelectorAll(".square");
@@ -922,7 +917,7 @@ for (x of interventions) {
         //appendTo: document.body
     });
 }
-
+//study quality
 const qualityCategory = ["low","medium","high"];
 //execute tippys and circles for grid
 circlesAndTippys();
@@ -936,6 +931,7 @@ function circlesAndTippys() {
       let y = allGrids[i].classList[0];
       let z = allGrids[i].classList[1];
       let gridWidth = allGrids[i].clientWidth;
+      let xCenter = gridWidth / 2;
       let gridHeight = allGrids[i].clientHeight;
       let bubs = d3.select(allGrids[i])
       .append("svg")
@@ -948,7 +944,7 @@ function circlesAndTippys() {
 
       console.log(pip);
       const circleDiameter = circleRadius * 2;
-      if(pip.length>0) {    
+      if(pip.length>0) {           
         let pips = {};
         pips = pip[0].key.charAt(0);
         bubs.append("g")
@@ -956,33 +952,38 @@ function circlesAndTippys() {
         .data(pips)
         .enter()
         .append("circle")
-          .attr("cx", (d, i) => circleRadius + 25 + (i * 2 * circleDiameter))
-          .attr("cy", circleRadius + 25 + 5)
+          //.attr("cx", (d, i) => circleRadius + 25 + (i * 2 * circleDiameter))
+          //.attr("cy", circleRadius + 25 + 5)
           .attr("r", circleRadius*5)
           .attr("class","circlegrid nodes " + qualityCategory[q] + " " + allGrids[i].classList[3])
           .attr("id",qualityCategory[q] + allGrids[i].id)
           .attr("stroke", "black")
           .style("stroke-width", .5)
-
+          .attr('cx', function(d) {
+            return d.x;
+          })
+          .attr('cy', function(d) {
+            return d.y;
+          })
+          
       //this compares the values in the data to the class list on the square element and if they match it adds the URL and author text to the tippy.
       let pop = "";
       for(var j = 0; j < data.length; j++){
           if(data[j].intervention.toLowerCase().includes(y) && data[j].outcomes.toLowerCase().includes(z) && data[j].quality.includes(qualityCategory[q]))
               pop += "<a target=_blank" + ' href=' + data[j].URL + '>' + data[j].pop +'</a>' + '<br>';
       };  
-      // if(pop.length > 0 && !allGridsArray[i].class.contains('filter'))
       if(pop.length > 0)
-      tippy("#" + qualityCategory[q] + allGrids[i].id, {
-      maxWidth: '',
-      content: '<p>' + data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z) && it.quality === qualityCategory[q]).length + '</p>' + pop,
-      allowHTML: true,
-      boundary: 'parent',
-      appendTo: document.body,
-      interactive: true
-      });
+          tippy("#" + qualityCategory[q] + allGrids[i].id, {
+              maxWidth: '',
+              content: '<p>' + data.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z) && it.quality === qualityCategory[q]).length + '</p>' + pop,
+              allowHTML: true,
+              boundary: 'parent',
+              appendTo: document.body,
+              interactive: true
+          });
       pop = '';
       pip = '';
-    };
+      };
     }
   }
 }
@@ -1001,40 +1002,22 @@ for (var x = 0; x < teacherGrids.length; x++) {
 for (var x = 0; x < studentGrids.length; x++) {
     studentGrids[x].className += ' student ';
 }
-
+//variable to track dropdown filter values shown on btn
 let cntButShort = document.querySelector("#countryButton").innerText;
 console.log(cntButShort);
 // function to show grids with teacher class and hide others
 function showTeacher() {
-  // let gridWidth = allGrids[i].clientWidth;
-  // let gridHeight = allGrids[i].clientHeight;
-  // if (cntButShort = "All countries") {
-  //   circlesAndTippys();
-  // }
     document.getElementById("grid").style.gridTemplateColumns = "repeat(4, 23vmin)";
     document.getElementById("teacheroutcomes").style.gridColumn = "2/5";
     Array.from(document.querySelectorAll(".teacher"))
     .forEach(function(val) {
         val.style.display = 'grid';
     });
-    // Array.from(document.querySelectorAll("svg"))
-    // .forEach(function(val) {
-    //     val.height = parentElement.clientWidth;
-    //     val.width = parentElement.clientWidth;
-    // });
     Array.from(document.querySelectorAll(".setting,.student"))
     .forEach(function(val) {
         val.style.display = 'none';
     });
-    //countryFilter(cntButShort);
-  //console.log(cntButShort);
-  
-  //countryFilter(cntButShort);
-  //circlesAndTippys();
-  
 }
-
-
 
 // function to show grids with student class and hide others
 function showStudent() {
@@ -1050,11 +1033,6 @@ function showStudent() {
     .forEach(function(val) {
         val.style.display = 'none';
     });
-    
-    
-   // countryFilter(cntButShort);
-   // circlesAndTippys();
-  console.log(cntButShort);
 }
 // function to show grids with setting class and hide others
 function showSetting() {
@@ -1069,9 +1047,6 @@ function showSetting() {
     .forEach(function(val) {
         val.style.display = 'none';
     });
-   // countryFilter(cntButShort);
-  console.log(cntButShort);
-  //circlesAndTippys();
 }
 
 // this is the d3 map https://gist.run/?id=3ccd770923a61f26f55156657e2f51e8 https://bl.ocks.org/d3indepth/raw/3ccd770923a61f26f55156657e2f51e8/
@@ -1113,9 +1088,6 @@ function update(geojson) {
       .attr("class", d => d.properties.name)
       .attr("class", d => d.properties.adm0_a3)
       .attr("name", d => d.properties.name_long)
-      //.attr("alpha", dfatCountries => dfatCountries.name)
-      // .attr("text-anchor", "middle")
-      // .attr("fill", "black")
       .classed(" land", true)
       .attr('d', geoGenerator)
       .on('mouseover', handleMouseover)
@@ -1159,11 +1131,7 @@ function draw() {
           followCursor: "initial",
           allowHTML: true,
           theme: "white",
-          //placement: "top",
-          //arrow: "false",
           boundary: 'parent',
-          //sticky: 'true',
-          //appendTo: 'parent',
           appendTo: document.body,
           interactive: true
           });
@@ -1187,7 +1155,6 @@ function labels() {
     .enter().append("circle", ".pin")
     .attr("r", 2)
     .attr("stroke","black")
-    //.attr("stroke-width",".01")
     .attr("class", d => d.DFATdevelopingcountry)
     .attr("transform", function(d) {
       return "translate(" + projection([
@@ -1213,15 +1180,14 @@ function labels() {
       .attr("class","labels");   
 }
 
+
 //legend for map
 const legend = d3.select("#chart")
 //const keys = ["High Income", "Low and Middle Income", "Evidence available", "Not included"];
-const keys = ["LMIC evidence","LMIC","Not included"];
-//color scale
+const keys = ["LMIC evidence","LMIC no evidence","Not included"];
+//color scale for map legend 
 const color = d3.scaleOrdinal()
   .domain(keys)
-  //.range(["#1d8ba7","#859cd3", "#5c4063", "#efefef"]);
-  // .range(["#5c4063","#859cd3","#efefef"]);
   .range(["#5c4063","#e9d9f3","#808080"]);
 // draw legend circles
 const size = 20
@@ -1229,10 +1195,9 @@ const size = 20
 // legend.selectAll()
 legend.append('rect')
   .attr('x', 2)
-  .attr('y', 6)
-  .attr('width', 135)
+  .attr('y', 2)
+  .attr('width', 155)
   .attr('height', 75)
-  // .attr('stroke', 'black')
   .attr('fill', 'white')
   .attr("opacity",".8");
 
@@ -1245,7 +1210,7 @@ legend.selectAll()
     .attr("stroke", "black")
     .attr("stroke-width", 2)
     .attr("cx", 12)
-    .attr("cy", function(d,i){ return 18 + i*(size+6)}) // 18 is where the first dot appears. size + 6 is the distance between dots
+    .attr("cy", function(d,i){ return 18 + i*(size+2)}) // 18 is where the first dot appears. size + 6 is the distance between dots
     .style("fill", function(d){ return color(d)})
 
 // draw legend text categories from keys const
@@ -1254,7 +1219,7 @@ legend.selectAll("mylabels")
   .enter()
   .append("text")
     .attr("x", 5 + size*1.2)
-    .attr("y", function(d,i){ return 10 + i*(size+6) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
+    .attr("y", function(d,i){ return 10 + i*(size+2) + (size/2)}) // 100 is where the first dot appears. 25 is the distance between dots
     .style("fill", "black")
     // .style("stroke","white")
     .attr("class","legend")
@@ -1331,29 +1296,17 @@ for (i = 0; i < btns.length; i++) {
     //this.textContent = val + " (" + data.filter(it => it.country.toLowerCase().includes(val)).length + ")";
   });
 }
-// Add active class to the current outcomes button (highlight it)
+// Add active class to the current outcomes button (highlight it) and put the selection text on the btn
 const outcomebtnsContainer = document.getElementById("tog");
 const outcomebtns = outcomebtnsContainer.getElementsByClassName("btnOutcomes");
 const outcomesButton = document.getElementById("outcomesButton");
 console.log(outcomebtns);
 for (i = 0; i < outcomebtns.length; i++) {
   outcomebtns[i].addEventListener("click", function(){
-    //console.log(outcomebtns[i]);
-    // const all = document.getElementById('tog');
-    // const current = all.querySelectorAll(".active");
-    // current[0].className = current[0].className.replace(" active", "");
-    // this.className += " active";
     outcomesButton.innerText = this.innerText;
-    console.log(this.innerText);
-    // if(outcomesButton.innerText = "Teacher Outcomes"){
-    //   circlesAndTippys();
-    //   showTeacher();
-    // }
-    // if(countryButton.innerText = "All countries") {
-    //   //circlesAndTippys();
-    // }
   });
 }
+//remove children of grid when using dropdown
 function removeTipCircles (){
   let list = document.querySelectorAll(".square");
   // As long as .square has a child node, remove it
@@ -1370,8 +1323,6 @@ function removeTipCircles (){
   });
 }
 
-
-
 // draws circles and tippys based on the selected country from the country dropdown
 function countryFilter(val) {
   cntButShort = val;
@@ -1382,60 +1333,39 @@ console.log(cntButShort);
 //checks each grid square against the clicked country and filters the studies
 for (i=0; i < allGridsArray.length; i++) {
   let countryData = data.filter(it => it.country.toLowerCase().includes(val));
-  //console.log(countryData);
-  
   let y = allGridsArray[i].classList[0];
   let z = allGridsArray[i].classList[1];
-  // let gridWidth = allGrids[i].offsetWidth;
-  // let gridHeight = allGrids[i].offsetHeight;
   let gridWidth = allGrids[i].clientWidth;
   let gridHeight = allGrids[i].clientHeight;
   let bubs = d3.select(allGrids[i])
-//console.log(allGrids[i]);
-  .append("svg")
-  //.attr("width", allGrids[i].parentNode.width)
-  .attr("width", gridWidth)
-  .attr("height", gridHeight);
+              .append("svg")
+              .attr("width", gridWidth)
+              .attr("height", gridHeight);
 
   //filters the filtered country further by quality category
   for (q=0;q<qualityCategory.length;q++) {
 
  //this filters the square element array and creates a new variable to calculate the length to use as the radius of the circle. same filter is used in the tippy generator below
- let pip = countryData.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z) && it.quality === qualityCategory[q]);
- //allGridsArray[i].innerHTML += '<svg class="circle' + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length * 7 + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
-let circleRadius = pip.length;
-  //console.log(pip.length);
-  const circleDiameter = circleRadius * 2;
+    let pip = countryData.filter(it => it.intervention.toLowerCase().includes(y) && it.outcomes.toLowerCase().includes(z) && it.quality === qualityCategory[q]);
+    let circleRadius = pip.length;
+    const circleDiameter = circleRadius * 2;
 
   if(pip.length>0) {    
-    //allGridsArray[i].innerHTML += '<svg id=' + qualityCategory[q] + allGrids[i].id +" " + 'class="circle ' + y + " " + z + '" xmlns="http://www.w3.org/2000/svg" version="1.1" width="100%" height="100%" viewBox="0 0 100 100"> <circle r=' + pip.length + ' cx="50%" cy="50%" stroke="FF5F33" stroke-width="2" fill=""/></svg>';
-    //allGrids[i].innerHTML += '<circle id=' + qualityCategory[q] + allGrids[i].id + 'class="circle ' + y + " " + z + " " + qualityCategory[q] + '" r=' + pip.length * 4 + ' cx=50% cy=50% stroke=black stroke-width=.5/></circle>';
-    //allGrids[i].innerHTML += '<svg xmlns=http://www.w3.org/2000/svg viewBox="0 0 100 100"><circle id=' + qualityCategory[q] + allGrids[i].id + ' class="circle"' + y + z + "" + qualityCategory[q] + ' ' + 'r=' + pip.length * 4 + ' cx=50% cy=50% stroke=black stroke-width=.5></circle>';
-   
-    
     let pips = {};
-     pips = pip[0].key.charAt(0);
-//console.log(pips);
+    pips = pip[0].key.charAt(0);
 
     bubs.append("g")
-    .selectAll("circle")
-    .data(pips)
-    .enter()
-    .append("circle")
-      .attr("cx", (d, i) => circleRadius + 25 + (i * 2 * circleDiameter))
-      .attr("cy", circleRadius + 25 + 5)
-      // .attr("cx", width/2)
-      // .attr("cy", height/2)
-      // .attr("r", 0)
-      // .transition()
-      .attr("r", circleRadius*5)
-      .attr("class","circlegrid nodes " + qualityCategory[q] + " " + allGrids[i].classList[3])
-      //.attr("class",q)
-      .attr("id",qualityCategory[q] + allGrids[i].id)
-      //.style("fill", "#69b3a2")
-      //.style("fill-opacity", 0.5)
-      .attr("stroke", "black")
-      .style("stroke-width", .5)
+        .selectAll("circle")
+        .data(pips)
+        .enter()
+        .append("circle")
+          .attr("cx", (d, i) => circleRadius + 25 + (i * 2 * circleDiameter))
+          .attr("cy", circleRadius + 25 + 5)
+          .attr("r", circleRadius*5)
+          .attr("class","circlegrid nodes " + qualityCategory[q] + " " + allGrids[i].classList[3])
+          .attr("id",qualityCategory[q] + allGrids[i].id)
+          .attr("stroke", "black")
+          .style("stroke-width", .5)
 
 
   //this compares the values in countryData to the class list on the square element and if they match it adds the URL and author text to the tippy.
@@ -1468,25 +1398,17 @@ document.getElementById("btnSriLanka").textContent = "Sri Lanka (" + data.filter
 document.getElementById("btnThailand").textContent = "Thailand (" + data.filter(it => it.country.toLowerCase().includes('thailand')).length + ")";
 document.getElementById("btnVietnam").textContent = "Vietnam (" + data.filter(it => it.country.toLowerCase().includes('vietnam')).length + ")";
 
-
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function countryDropDown() {
   document.getElementById("myDropdown").classList.toggle("show");
-  //circlesAndTippys();
 }
 function showAll() {
   circlesAndTippys();
 }
-
-console.log(cntButShort);
 function outcomesDropDown() {
   document.getElementById("myDropdown2").classList.toggle("show");
-  // countryFilter(cntButShort);
-  // console.log(cntButShort);
 }
-
-
 // Close the dropdown if the user clicks outside of it
 window.onclick = function(event) {
   if (!event.target.matches('.dropbtn')) {
@@ -1501,7 +1423,6 @@ window.onclick = function(event) {
     }
   }
 }
-// window.onresize = circlesAndTippys();
 window.onload = function() {
   circlesAndTippys();
 }

@@ -13,11 +13,12 @@
 <link href="https://unpkg.com/tippy.js/dist/tippy.css">
 <link rel="stylesheet" href="css/styles.css">
 <script src="https://d3js.org/d3.v4.js"></script>
-<script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
+<!-- <script src="https://d3js.org/d3-scale-chromatic.v1.min.js"></script>
 <script src="https://d3js.org/d3-dispatch.v1.min.js"></script>
-<script src="https://d3js.org/d3-quadtree.v1.min.js"></script>
-<script src="https://d3js.org/d3-timer.v1.min.js"></script>
-<script src="https://d3js.org/d3-force.v2.min.js"></script>
+<script src="https://d3js.org/d3-quadtree.v1.min.js"></script> -->
+<!-- <script src="https://d3js.org/d3-timer.v1.min.js"></script> -->
+<!-- <script src="https://d3js.org/d3-force.v2.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script> -->
 <style>
 
 </style>
@@ -138,7 +139,17 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </div>
 
 
-
+<div id="gridLegend" class="gridLegend">
+    <svg>
+        <text x="0" y="20">Quality: </text>
+        <circle cx="70" cy="50%" r="5" stroke="black" class="gridLegendLow"/>
+        <text x="85" y="20">Low</text>
+        <circle cx="130" cy="50%" r="5" stroke="black" class="gridLegendMedium"/>
+        <text x="145" y="20">Medium</text>
+        <circle cx="220" cy="50%" r="5" stroke="black" class="gridLegendHigh"/>
+        <text x="235" y="20">High</text>
+    </svg>
+</div>
 <footer class="bg-dark">
     <div class="container">
         <div class="row py-4 text-white">

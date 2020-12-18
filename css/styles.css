@@ -2,7 +2,6 @@
     border-style: solid;
     font-family: 'Poppins', sans-serif;
     border-width: thin;
-    
     border-color: whitesmoke;
 }
 .grid {
@@ -19,11 +18,12 @@
 #teacheroutcomes {
     grid-column: 6/9;
 }
-/* body {
-    background-image: url(https://www.acer.org/assets/images/dest/banners/gem.png);
-    background-color: rgba(255,255,255,0.7);
-    background-blend-mode: luminosity;
-} */
+body {
+    background-image: url(/images/geometry.svg);
+    background-repeat: no-repeat;
+    background-position: left;
+    background-size: 110%;
+}
 #studentoutcomes {
     grid-column: 9/11;   
 }
@@ -40,18 +40,15 @@
     text-align: center;
     justify-content: center;
     align-items: center;
-    /* line-height: ; */
     padding: 5px 10px;
 }
 circle {
-    fill: lightslategray;
-    /* stroke: black; */
+    stroke: black;
 }
-
 /* to change svg circle on hover */
 #grid circle:hover {
     stroke: rgb(58, 56, 56);    
-    fill: black;
+    fill: white;
 }
 .filter {
     display: none;
@@ -62,8 +59,9 @@ a {
 a:hover {
     color: lightgray;
 }
-.tog {
-    /* padding: 4px; */
+#gridLegend {
+    width: 100%;
+    height: 30px;
 }
 #chart {
     width: 100%;
@@ -72,7 +70,6 @@ a:hover {
     background: lightblue;
 }
 .tippy-box {
-    /* font-size: .9em; */
     background-color:#333333;
     color: white;
     opacity: 1;
@@ -91,11 +88,9 @@ footer.bg-dark {
 .navbar .navbar-brand {
     margin-right: 10px!important;
 }
-
 @media only screen and (max-width: 1199px) {
     .headRow {
         font-size: .8em;
-        /* line-height: .7rem; */
     }
 }
 @media only screen and (max-width: 1025px) {
@@ -104,7 +99,6 @@ footer.bg-dark {
     }
     .interventionRow {
         font-size: .5em; 
-    /* line-height: .7rem; */
     }
     .headRow {
         font-size: .8em;
@@ -118,34 +112,10 @@ footer.bg-dark {
     }
     .grid {
         grid-template-columns: repeat(5, 18vmin);
-        /* grid-template-rows: repeat(6, 40px); */
-        /* max-width: 100%;
-        width: auto;
-        margin-left: auto;
-        margin-right: auto; */
     }
     .grid > svg {
         width: 100%;
-        /* height: 100%; */
     }
-    /* .low {
-        
-        cx: 65%;
-        cy: 65%;
-        
-    }
-    .medium {
-        fill: #2d936c;
-        cx: 50%;
-        cy: 50%;
-       
-    }
-    .high {
-        fill: #1E88E5;
-        cx: 25%;
-        cy: 25%;
-       
-    } */
     #chart {
         height: 350px;
     }
@@ -154,39 +124,27 @@ footer.bg-dark {
         margin-left: auto;
         margin-right: auto;
     }
-    /* formatting for map tippy */
-    /* .tippy-box[data-theme~='white'] {
-        background-color: white;
-        color: black;
-        line-height: 100%;
-        border-style: solid;
-        border-width: .5px;
-    } */
+    /* dropdown style for small screen */
     .btn {
         font-size: .7em;
         border-radius: 0;
     }
 
 }
+/* Hides outcomes dropdown on small screen */
 @media only screen and (min-width: 1025px) {
     #myBtnContainer2 {
         display: none;
     }
 }
+/* overrides bootstrap rounded buttons */
 .btn {
-    /* font-size: .7em; */
     border-radius: 0;
 }
 /*  style for map*/
 #content .info {
     height: 20px;
 }
-
-/* #content .map path {
-fill: #aaa;
-stroke: black;
-stroke-width: 4;
-} */
 #svg {
     width: 100%;
     height: 100%;
@@ -198,8 +156,6 @@ stroke-width: 4;
     stroke-width: .003;
 }
 #content .notDev {
-    /* fill: #1d8ba7; */
-    /* fill: #efefef; */
     fill: #808080;
 }
 #content .dfatDev {
@@ -207,11 +163,7 @@ stroke-width: 4;
     
 }
 #content .study {
-    /* fill: #72118a; */
     fill: #5c4063;
-    /* stroke: white;
-    stroke-width: 1; */
-
 }
 #content .study:hover {
     fill: #a479af;
@@ -248,30 +200,10 @@ a.cntInfo:hover {
 .tippy-box[data-theme~='white'] a:visited {
     color: gray;
 }
-
-/* .legend {
-    background: lightslategray;
-} */
 .labels {
     font-size: .7em;
-    /* stroke: white;
-    stroke-width: .1; */
     cursor: default;
 }
-/* .btn {
-    color: #7E277E;
-    border-color: #7E277E;
-    
-}
-.btn:hover {
-    background-color: #7E277E;
-    color:white;
-}
-.btn:active {
-    background-color: #7E277E;
-    color:white;
-} */
-
 .filterDiv {
     float: left;
     background-color: #2196F3;
@@ -282,93 +214,58 @@ a.cntInfo:hover {
     margin: 2px;
     display: none; /* Hidden by default */
 }
-
-/* The "show" class is added to the filtered elements */
+/* dropdown menu hide */
 .hide {
     display: none;
 }
-
 .show {
 display: block;
 }
+#gridLegend .gridLegendLow {
+    fill:  rgb(248, 99, 99);
+}
+#gridLegend .gridLegendMedium {
+    fill: #2d936c;
+}
+#gridLegend .gridLegendHigh {
+    fill: #1E88E5;
+}
 .low {
-    /* fill: #391463; */
+    fill: rgb(248, 99, 99);
     cx: 65%;
     cy: 65%;
-    /* cursor: pointer; */
 }
 .medium {
     fill: #2d936c;
     cx: 35%;
     cy: 65%;
-   /* cursor: pointer; */
 }
 .high {
     fill: #1E88E5;
     cx: 50%;
     cy: 35%;
-   /* cursor: pointer; */
 }
-
-/* Dropdown Button */
-/* .dropbtn {
-    background-color: #3498DB;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-  } */
-  
-  /* Dropdown button on hover & focus */
-  /* .dropbtn:hover, .dropbtn:focus {
-    background-color: #2980B9;
-  } */
-  
-  /* The container <div> - needed to position the dropdown content */
-  .dropdown {
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
     position: relative;
     display: inline-block;
-  }
-  
-  /* Dropdown Content (Hidden by Default) */
-  .dropdown-content {
-    display: none;
-    position: absolute;
-    /* background-color: white; */
-    min-width: 150px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1; */
-  }
-  .dropdown-content2 {
-    display: none;
-    position: absolute;
-    /* background-color: white; */
-    min-width: 200px;
-    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1; */
-  }
-  
-  /* Links inside the dropdown */
-  /* .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-  } */
-  
-  /* Change color of dropdown links on hover */
-  /* .dropdown-content a:hover {background-color: #ddd} */
-  
-  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
-  .show {display:block;}
-  .btnCountry{
-    /* color: #7E277E;
-    border-color: #7E277E; */
-    background-color: white;
-    
 }
-.btnOutcomes{
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 150px;
+}
+.dropdown-content2 {
+    display: none;
+    position: absolute;
+    min-width: 200px;
+}
+  /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {
+    display:block;
+}
+.btnCountry, .btnOutcomes{
     /* color: #7E277E;
     border-color: #7E277E; */
     background-color: white;
